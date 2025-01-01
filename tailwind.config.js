@@ -4,7 +4,14 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        kanit: ['Kanit', 'sans-serif'],
+        kanit: ["Rubik Vinyl", "sans-serif"],
+        Karla: ["Karla", "sans-serif"],
+      },
+      colors:{
+        customGreen: "#86AB89",
+        customDusra: "#CBE2B5",
+        customPalette: "#FFFDEC",
+        DarkColor: "#1E201E",
       },
     },
   },

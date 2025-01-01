@@ -10,21 +10,15 @@ function Platforms(){
     return(
         <>
         {/* hover:left-7 hover:w-9 hover:h-9 */}
-        <div>
+        <div className="ml-5 flex flex-col w-12 items-center">
+        
+        <span className="h-28 w-2 z-10 bg-gray-900 rounded-b"></span>
 
-        <div className="top-0 box left-12 h-44 w-1 bg-gray-200 rounded-full absolute"></div>
-        <div className="absolute left-6 top-48 ">
-        <FontAwesomeIcon className="w-8 h-8 hover:cursor-pointer transition-all bg-white p-2 rounded-full" icon={faGithub} />
-        </div>
-        {/* <div className="h-10 w-1 bg-gray-200 absolute left-12 top-62"></div> */}
-        <div className="absolute left-6 top-64">
-        <FontAwesomeIcon className="w-8 h-8 hover:cursor-pointer transition-all bg-white p-2 rounded-full" icon={faLinkedin} />
-        </div>
-        <div className="absolute left-6 top-2/4">
-        <FontAwesomeIcon className="w-8 h-8 hover:cursor-pointer transition-all bg-white p-2 rounded-full" icon={faEnvelope} />
-        </div>
-        <div className="absolute left-6 top-96">
-        <FontAwesomeIcon className="w-8 h-8 hover:cursor-pointer hover:font-white hover:bg-black transition-all bg-white p-2 rounded-full" icon={faInstagram} />
+        <div className="flex flex-col justify-between h-64 mt-4">
+        <FontAwesomeIcon className="w-8 h-8 hover:cursor-pointer transition-all p-2" icon={faGithub} />
+        <FontAwesomeIcon className="w-8 h-8 hover:cursor-pointer transition-all p-2" icon={faLinkedin} />
+        <FontAwesomeIcon className="w-8 h-8 hover:cursor-pointer transition-all p-2" icon={faEnvelope} />
+        <FontAwesomeIcon className="w-8 h-8 hover:cursor-pointer transition-all p-2" icon={faInstagram} />
         </div>
         </div>
         </>
