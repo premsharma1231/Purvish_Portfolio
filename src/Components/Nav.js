@@ -11,7 +11,7 @@ function Navbar(){
     <>
     <div className="flex justify-between bg-DarkColor px-4 py-4">
     <li className="text-4xl ml-16 list-none">
-          <a className="text-white active font-Karla" aria-current="page" href="#">MY PORTFOLIO</a>
+          <a className="text-white active font-kanit" aria-current="page" href="#">Purvish</a>
     </li>
       <div className="flex font-bold">
         <li className="text-lg list-none m-2">

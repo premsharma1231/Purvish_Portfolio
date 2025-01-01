@@ -15,11 +15,35 @@ function Platforms(){
         <span className="h-28 w-2 z-10 bg-gray-900 rounded-b"></span>
 
         <div className="flex flex-col justify-between h-64 mt-4">
-        <FontAwesomeIcon className="w-8 h-8 hover:cursor-pointer transition-all p-2" icon={faGithub} />
-        <FontAwesomeIcon className="w-8 h-8 hover:cursor-pointer transition-all p-2" icon={faLinkedin} />
-        <FontAwesomeIcon className="w-8 h-8 hover:cursor-pointer transition-all p-2" icon={faEnvelope} />
-        <FontAwesomeIcon className="w-8 h-8 hover:cursor-pointer transition-all p-2" icon={faInstagram} />
-        </div>
+  {/* Github Profile with Tooltip */}
+  <FontAwesomeIcon 
+    className="w-8 h-8 hover:cursor-pointer transition-all p-2" 
+    icon={faGithub} 
+    bounce
+  />
+
+  {/* LinkedIn Icon */}
+  <FontAwesomeIcon 
+    className="w-8 h-8 hover:cursor-pointer transition-all p-2" 
+    icon={faLinkedin} 
+    bounce 
+  />
+
+  {/* Email Icon */}
+  <FontAwesomeIcon 
+    className="w-8 h-8 hover:cursor-pointer transition-all p-2" 
+    icon={faEnvelope} 
+    bounce 
+  />
+
+  {/* Instagram Icon */}
+  <FontAwesomeIcon 
+    className="w-8 h-8 hover:cursor-pointer transition-all p-2" 
+    icon={faInstagram} 
+    bounce 
+  />
+</div>
+
         </div>
         </>
     )

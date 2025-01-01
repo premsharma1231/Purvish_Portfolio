@@ -13,7 +13,7 @@ document.body.style.backgroundColor = '#ECDFCC';
     <>
     <Navbar />
     <Platforms />
-    {/* <Content /> */}
+    <Content />
     </>
   );
 }
