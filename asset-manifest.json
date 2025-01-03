@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/premsharma1231/PortFolio/static/css/main.ddf878a0.css",
+    "main.js": "/premsharma1231/PortFolio/static/js/main.76229145.js",
+    "static/js/453.ed3810f9.chunk.js": "/premsharma1231/PortFolio/static/js/453.ed3810f9.chunk.js",
+    "static/media/rubik-vinyl-latin-400-normal.woff": "/premsharma1231/PortFolio/static/media/rubik-vinyl-latin-400-normal.250edfff990a5b3dd758.woff",
+    "static/media/rubik-vinyl-latin-400-normal.woff2": "/premsharma1231/PortFolio/static/media/rubik-vinyl-latin-400-normal.84f3dfdeaaec06fcbe3b.woff2",
+    "static/media/rubik-vinyl-latin-ext-400-normal.woff": "/premsharma1231/PortFolio/static/media/rubik-vinyl-latin-ext-400-normal.f1789258925ccd3b8694.woff",
+    "static/media/rubik-vinyl-cyrillic-400-normal.woff": "/premsharma1231/PortFolio/static/media/rubik-vinyl-cyrillic-400-normal.552f179f64c59e5b84f4.woff",
+    "static/media/rubik-vinyl-latin-ext-400-normal.woff2": "/premsharma1231/PortFolio/static/media/rubik-vinyl-latin-ext-400-normal.a86ef2940dba112b6d73.woff2",
+    "static/media/rubik-vinyl-cyrillic-400-normal.woff2": "/premsharma1231/PortFolio/static/media/rubik-vinyl-cyrillic-400-normal.2d95f860bea546a5f773.woff2",
+    "static/media/rubik-vinyl-cyrillic-ext-400-normal.woff": "/premsharma1231/PortFolio/static/media/rubik-vinyl-cyrillic-ext-400-normal.375ab229cc8257a4d006.woff",
+    "static/media/rubik-vinyl-cyrillic-ext-400-normal.woff2": "/premsharma1231/PortFolio/static/media/rubik-vinyl-cyrillic-ext-400-normal.68022d4f8c5345dfd76b.woff2",
+    "static/media/rubik-vinyl-hebrew-400-normal.woff": "/premsharma1231/PortFolio/static/media/rubik-vinyl-hebrew-400-normal.ddaecbc0c6bd274906df.woff",
+    "static/media/rubik-vinyl-hebrew-400-normal.woff2": "/premsharma1231/PortFolio/static/media/rubik-vinyl-hebrew-400-normal.9c98e01ce58aaad0cee3.woff2",
+    "static/media/karla-latin-400-normal.woff": "/premsharma1231/PortFolio/static/media/karla-latin-400-normal.0a54f1fd213b2cd581b9.woff",
+    "static/media/karla-latin-400-normal.woff2": "/premsharma1231/PortFolio/static/media/karla-latin-400-normal.c5d7ce15a17c6687f399.woff2",
+    "static/media/karla-latin-ext-400-normal.woff": "/premsharma1231/PortFolio/static/media/karla-latin-ext-400-normal.4954f37545f88dbd2246.woff",
+    "static/media/karla-latin-ext-400-normal.woff2": "/premsharma1231/PortFolio/static/media/karla-latin-ext-400-normal.c3ad5b4ac05ab9d66dc6.woff2",
+    "index.html": "/premsharma1231/PortFolio/index.html",
+    "main.ddf878a0.css.map": "/premsharma1231/PortFolio/static/css/main.ddf878a0.css.map",
+    "main.76229145.js.map": "/premsharma1231/PortFolio/static/js/main.76229145.js.map",
+    "453.ed3810f9.chunk.js.map": "/premsharma1231/PortFolio/static/js/453.ed3810f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ddf878a0.css",
+    "static/js/main.76229145.js"
+  ]
+}
