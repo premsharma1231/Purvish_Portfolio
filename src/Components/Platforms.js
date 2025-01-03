@@ -17,30 +17,30 @@ function Platforms(){
         <div className="flex flex-col justify-between h-64 mt-4">
   {/* Github Profile with Tooltip */}
   <FontAwesomeIcon 
-    className="w-8 h-8 hover:cursor-pointer transition-all p-2" 
+    className="w-8 h-8 transition-all p-2" 
     icon={faGithub} 
     bounce
   />
 
   {/* LinkedIn Icon */}
   <FontAwesomeIcon 
-    className="w-8 h-8 hover:cursor-pointer transition-all p-2" 
+    className="w-8 h-8 transition-all p-2" 
     icon={faLinkedin} 
     bounce 
   />
 
   {/* Email Icon */}
   <FontAwesomeIcon 
-    className="w-8 h-8 hover:cursor-pointer transition-all p-2" 
+    className="w-8 h-8 transition-all p-2" 
     icon={faEnvelope} 
     bounce 
   />
 
   {/* Instagram Icon */}
   <FontAwesomeIcon 
-    className="w-8 h-8 hover:cursor-pointer transition-all p-2" 
+    className="w-8 h-8 transition-all p-2" 
     icon={faInstagram} 
-    bounce 
+    bounce
   />
 </div>
 
