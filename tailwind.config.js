@@ -6,6 +6,7 @@ module.exports = {
       fontFamily: {
         kanit: ["Rubik Vinyl", "sans-serif"],
         Karla: ["Karla", "sans-serif"],
+        Teko: ["Teko", "sans-serif"],
       },
       colors:{
         customGreen: "#86AB89",

@@ -10,6 +10,7 @@ import Cursor from './Components/cursor';
 
 function App() {
 document.body.style.backgroundColor = '#ECDFCC';
+document.body.style.overflow = 'hidden';
   return (
     <>
     <Cursor />

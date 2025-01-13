@@ -6,14 +6,24 @@ import "@fontsource/rubik-vinyl";
 import "@fontsource/karla";
 import { Cross as Hamburger } from 'hamburger-react'
 import { gsap } from "gsap";
+import { useGSAP } from '@gsap/react';
+
+gsap.registerPlugin(useGSAP);
 
 
 
 
 function Navbar(){
   const [isToggled, setIsToggled] = useState(false);
-  const navRef = useRef(null);
+  const navRef = useRef(null); 
+  const timeline = gsap.timeline();
 
+
+  const handleToggle = () => {
+    setIsToggled((prevState) => !prevState);
+  };
+
+  
   let navBarContentMiddle = [
     `HOME`,
     `ABOUT`,
@@ -22,25 +32,23 @@ function Navbar(){
     `LET'S TALK?`
 ]
 
-const handleToggle = () => {
-  setIsToggled(prevState => !prevState);
-};
 
-useEffect(() => {
+useGSAP(() => {
   if (isToggled) {
-    // Animate the nav items when they are shown
     gsap.fromTo(navRef.current, 
-      { y: -50, opacity: 0 }, // Start position and opacity
-      { 
-        y: 0, 
-        opacity: 1, 
-        duration: 0.3, 
-        ease: "bounce" // Use bounce easing for a bubble effect
+      { x: 90, opacity: 1 }, 
+      { x: 0, opacity: 1, duration: 0.1, ease: 'bounce',}
+    );
+  } else {
+    gsap.to(navRef.current, 
+      { x: 90,
+        opacity: 0,
+        duration: 0.1,
+        ease: "power3.in",
       }
     );
   }
-}, [isToggled]);
-
+}, [isToggled]); // Runs animation on state change
 
 
   return(
@@ -48,27 +56,31 @@ useEffect(() => {
     <>
     <div className="flex justify-between items-center bg-DarkColor px-4 py-4">
     <li className="text-4xl ml-16 hover:scale-150 transition-all list-none">
-          <a className="text-white active font-kanit hover:cursor-none" aria-current="page" href="#">Port-Folio</a>
+          <a className="text-white active font-kanit" aria-current="page" href="#">Port-Folio</a>
     </li>
-     
+    
      <div className="flex w-40 justify-between items-center">
     <Hamburger color="white" className="mr-4" toggled={isToggled} onToggle={handleToggle} />
     <Switch/>
      </div>
     <div ref={navRef} // Attach the ref to the nav items container
-          className={`overflow-hidden absolute top-56 ${isToggled ? 'flex' : 'hidden'} right-4 transition-all text-right flex-col font-bold`}
+          className={`absolute top-36 right-1 transition-all text-center flex-col font-bold z-10`}
 >
-    {navBarContentMiddle.map((item, index) => (
-      <li key={index} className="hover:cursor-none text-lg list-none m-2 hover:scale-125 transition-all">
-        <a className="text-black active font-Karla hover:cursor-none hover:scale-125 transition-all" aria-current="page" href="#">
-          {item}
-        </a>
-      </li>
-    ))}
+        {navBarContentMiddle.map((item, index) => (
+            <li
+              key={index}
+              className="w-40 h-8 bg-DarkColor hover:cursor text-lg list-none m-2 hover:scale-105 transition-all"
+            >
+              <a
+                className="text-white active font-Karla transition-all" 
+                aria-current="page" 
+                href="#"
+              >
+                {item}
+              </a>
+            </li>
+          ))}
   </div>
-
-
-
     </div>
     </>
 )
