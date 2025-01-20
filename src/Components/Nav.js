@@ -7,6 +7,8 @@ import "@fontsource/karla";
 import { Cross as Hamburger } from 'hamburger-react'
 import { gsap } from "gsap";
 import { useGSAP } from '@gsap/react';
+import { Link } from "react-router-dom";
+
 
 gsap.registerPlugin(useGSAP);
 
@@ -25,12 +27,12 @@ function Navbar(){
 
   
   let navBarContentMiddle = [
-    `HOME`,
-    `ABOUT`,
-    `RESUME`,
-    `PROJECTS`,
-    `LET'S TALK?`
-]
+    { name: "HOME", path: "/" },
+    { name: "ABOUT", path: "/about" },
+    { name: "RESUME", path: "/resume" },
+    { name: "PROJECTS", path: "/projects" },
+    { name: "LET'S TALK?", path: "/letstalk" },
+  ]
 
 
 useGSAP(() => {
@@ -64,20 +66,19 @@ useGSAP(() => {
     <Switch/>
      </div>
     <div ref={navRef} // Attach the ref to the nav items container
-          className={`absolute top-36 right-1 transition-all text-center flex-col font-bold z-10`}
+          className={`absolute top-28 right-1 transition-all text-center flex-col font-bold z-10`}
 >
-        {navBarContentMiddle.map((item, index) => (
+{navBarContentMiddle.map((item, index) => (
             <li
               key={index}
-              className="w-40 h-8 bg-DarkColor hover:cursor text-lg list-none m-2 hover:scale-105 transition-all"
+              className="w-40 h-8 bg-DarkColor text-lg list-none m-2 hover:scale-105 hover:cursor transition-all"
             >
-              <a
-                className="text-white active font-Karla transition-all" 
-                aria-current="page" 
-                href="#"
+              <Link
+                className="text-white active font-Karla transition-all"
+                to={item.path}
               >
-                {item}
-              </a>
+                {item.name}
+              </Link>
             </li>
           ))}
   </div>

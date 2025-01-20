@@ -5,7 +5,7 @@ import "@fontsource/rubik-vinyl";
 import "@fontsource/karla";
 import "@fontsource/teko";
 import Typewriter from 'typewriter-effect/dist/core';
-import Image from './Image.png'; // Correct import path
+import Image from './Image.png';
 
 
 const Content = () => {
@@ -16,22 +16,14 @@ const Content = () => {
     const text = "I am a Frontend Web Developer and also a trainer in the BPO/KPO sector. <br/>Additionally, I have experience as a Quality Analyst<br/>, Auditor, and Research Analyst.";
     
     useEffect(() => {
-        new Typewriter('#typewriter', {
-            strings: [text],
-            autoStart: true,
-            loop: true,
-          });
-        // new Typewriter('#typewriter2', {
-        //     strings: [text2],
-        //     autoStart: true,
-        //     loop: true,
-        //   });
-        // new Typewriter('#typewriter3', {
-        //     strings: [text4],
-        //     autoStart: true,
-        //     loop: true,
-        //   });
-          
+            new Typewriter('#typewriter', {
+                strings: [text],
+                autoStart: true,
+                loop:false,
+                cursor: '|',
+            }).pasteString(text);
+             // Instantly inserts the string without typing animation
+            // .start();
     });
 
     
