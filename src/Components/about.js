@@ -2,10 +2,10 @@ import React from "react";
 
 
 
-function about(){
+function About(){
 <>
 
 </>
 }
 
-export default about;
+export default About;

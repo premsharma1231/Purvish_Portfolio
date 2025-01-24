@@ -9,6 +9,7 @@ import Image from './Image.png';
 
 
 const Content = () => {
+    document.body.style.overflow = 'hidden';
     const text1 = "HEY I AM";
     const text2 = "Purvish Sharma";
     const text3 = "BUT YOU CAN CALL ME";

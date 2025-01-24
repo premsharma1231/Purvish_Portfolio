@@ -2,9 +2,9 @@ import React from "react";
 
 
 
-function letstalk(){
+function LetsTalk(){
 <>
 </>
 }
 
-export default letstalk;
+export default LetsTalk;

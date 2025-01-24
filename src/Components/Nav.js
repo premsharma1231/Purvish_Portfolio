@@ -27,9 +27,9 @@ function Navbar(){
 
   
   let navBarContentMiddle = [
-    { name: "HOME", path: "/" },
+    { name: "HOME", path: "/home" },
     { name: "ABOUT", path: "/about" },
-    { name: "RESUME", path: "/resume" },
+    { name: "RESUME", path: "/resume" },  
     { name: "PROJECTS", path: "/projects" },
     { name: "LET'S TALK?", path: "/letstalk" },
   ]
@@ -57,7 +57,7 @@ useGSAP(() => {
 
     <>
     <div className="flex justify-between items-center bg-DarkColor px-4 py-4">
-    <li className="text-4xl ml-16 hover:scale-150 transition-all list-none">
+    <li className="text-5xl ml-6 hover:scale-105 transition-all list-none">
           <a className="text-white active font-kanit" aria-current="page" href="#">Port-Folio</a>
     </li>
     
