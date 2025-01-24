@@ -21,11 +21,11 @@ const Cursor = () => {
             }}
             />
         <div
-            className="fixed w-2 h-2 p-3 border-slate-800 border-2 rounded-full pointer-events-none transition-all duration-75 ease-out"
+            className="fixed w-2 h-2 p-3 z-50 border-black border-2 rounded-full pointer-events-none transition-all duration-75 ease-out"
             style={{
                 left: `${position.x - 19}px`,
                 top: `${position.y - 19}px`,
-                mixBlendMode: 'difference',
+                // mixBlendMode: 'difference',
             }}
             />
         </>

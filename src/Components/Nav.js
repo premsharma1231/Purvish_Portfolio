@@ -17,7 +17,7 @@ gsap.registerPlugin(useGSAP);
 
 function Navbar(){
   const [isToggled, setIsToggled] = useState(false);
-  const navRef = useRef(null); 
+  const navRef = useRef(null);
   const timeline = gsap.timeline();
 
 
@@ -27,11 +27,11 @@ function Navbar(){
 
   
   let navBarContentMiddle = [
-    { name: "HOME", path: "/home" },
+    { name: "HOME", path: "/" },
     { name: "ABOUT", path: "/about" },
     { name: "RESUME", path: "/resume" },  
     { name: "PROJECTS", path: "/projects" },
-    { name: "LET'S TALK?", path: "/letstalk" },
+    { name: "LET'S TALK?", path: "/LetsTalk" },
   ]
 
 

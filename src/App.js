@@ -19,7 +19,7 @@ function AnimatedRoutes() {
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
         <Route
-          path="/home"
+          path="/"
           element={
             <motion.div
               initial={{ x: '-100vw' }}
@@ -71,7 +71,7 @@ function AnimatedRoutes() {
           }
         />
         <Route
-          path="/letstalk"
+          path="/LetsTalk"
           element={
             <motion.div
             initial={{ x: '-100vw' }}

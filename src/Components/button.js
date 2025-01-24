@@ -1,5 +1,5 @@
 import React from 'react';
-import '../button.css';
+import '../button.scss';
 
 const Button = ({ as, children, filled, secondary, ...rest }) => {
   const Element = as || 'button'; // Default to 'button' if no `as` prop is passed
