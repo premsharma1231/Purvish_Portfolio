@@ -10,7 +10,7 @@ function Platforms(){
     return(
         <>
         {/* hover:left-7 hover:w-9 hover:h-9 */}
-        <div className="ml-5 flex flex-col w-12 items-center">
+        <div className="ml-5 flex flex-col w-12 items-center absolute">
         
         <span className="h-28 w-2 z-10 bg-gray-900 rounded-b"></span>
 
@@ -18,7 +18,7 @@ function Platforms(){
   {/* Github Profile with Tooltip */}
   <FontAwesomeIcon 
     className="w-8 h-8 transition-all p-2" 
-    icon={faGithub} 
+    icon={faGithub}
     bounce
   />
 

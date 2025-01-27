@@ -24,31 +24,31 @@ function LetsTalk() {
   };
 
   return (
-    <div className='absolute w-full top-32 flex justify-center'>
-
-    <div className='mx-auto p-8 bg-gray-100 rounded-lg shadow-md'>
-      <h2 className='text-2xl font-bold text-center text-blue-900'>SEND ME AN EMAIL</h2>
-      <p className='text-gray-700 text-center mb-6'>We are very responsive to messages!!</p>
+    <div className='flex mt-10 mb-10 justify-center'>
+      
+    <div className='w-8/12 p-8 rounded-lg shadow-lg'>
+      <h2 className='text-2xl font-bold text-center font-kanit text-black'>SEND ME AN EMAIL</h2>
+      <p className='text-gray-400 text-center mb-6'>We are very responsive to messages!!</p>
       <form onSubmit={handleSubmit} className='space-y-6'>
         <div>
-          <label htmlFor='name' className='flex items-center text-blue-900'><FaUser className='mr-2'/> Name:</label>
+          <label htmlFor='name' className='flex items-center text-black'><FaUser className='mr-2'/> Name:</label>
           <input type='text' id='name' name='name' placeholder='Your Name' className='w-full p-3 border-2 border-gray-300 focus:border-blue-900 rounded mt-1' onChange={handleInputChange} required />
         </div>
         <div>
-          <label htmlFor='email' className='flex items-center text-blue-900'><FaEnvelope className='mr-2'/> Email:</label>
+          <label htmlFor='email' className='flex items-center text-black'><FaEnvelope className='mr-2'/> Email:</label>
           <input type='email' id='email' name='email' placeholder='Your Email' className='w-full p-3 border-2 border-gray-300 focus:border-blue-900 rounded mt-1' onChange={handleInputChange} required />
         </div>
         <div>
-          <label htmlFor='feedback' className='flex items-center text-blue-900'><FaCommentDots className='mr-2'/> Detailed Feedback:</label>
+          <label htmlFor='feedback' className='flex items-center text-black'><FaCommentDots className='mr-2'/> Detailed Message/Feedback:</label>
           <textarea id='feedback' name='feedback' placeholder='Your Feedback' className='w-full p-3 border-2 border-gray-300 focus:border-blue-900 rounded mt-1' rows='4' onChange={handleInputChange} required></textarea>
         </div>
         <div className='flex items-center justify-between'>
           <button className='text-blue-500 bg-transparent hover:bg-blue-500 hover:text-white font-bold py-2 px-4 rounded inline-flex items-center'>
-            <FaUpload className='mr-2' /> Upload Image
+            <FaUpload className='mr-2'/> Upload Image
             <input type='file' className='hidden' onChange={handleImageChange} multiple />
           </button>
           <div>
-            <label className='text-blue-900'>Rating:</label>
+            <label className='text-black'>Rating:</label>
             <select name='rating' onChange={handleInputChange} className='ml-2 border-2 border-gray-300 focus:border-blue-900 rounded p-2'>
               <option value=''>Choose...</option>
               <option value='1'>1</option>

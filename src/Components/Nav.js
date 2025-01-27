@@ -19,6 +19,8 @@ function Navbar(){
   const [isToggled, setIsToggled] = useState(false);
   const navRef = useRef(null);
   const timeline = gsap.timeline();
+  const listItemsRef = useRef([]);
+
 
 
   const handleToggle = () => {
@@ -27,7 +29,7 @@ function Navbar(){
 
   
   let navBarContentMiddle = [
-    { name: "HOME", path: "/" },
+    { name: "HOME", path: "/home" },
     { name: "ABOUT", path: "/about" },
     { name: "RESUME", path: "/resume" },  
     { name: "PROJECTS", path: "/projects" },
@@ -35,22 +37,33 @@ function Navbar(){
   ]
 
 
-useGSAP(() => {
-  if (isToggled) {
-    gsap.fromTo(navRef.current, 
-      { x: 90, opacity: 1 }, 
-      { x: 0, opacity: 1, duration: 0.1, ease: 'bounce',}
-    );
-  } else {
-    gsap.to(navRef.current, 
-      { x: 90,
+  useEffect(() => {
+    if (isToggled) {
+      // Stagger animation for items
+      gsap.fromTo(
+        listItemsRef.current,
+        { x: 50, opacity: 0, scale: 1 }, // Starting position
+        {
+          x: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 0.5,
+          ease: "bounce.out",
+          stagger: 0.2, // Delay between each item animation
+        }
+      );
+    } else {
+      // Reverse animation for hiding items
+      gsap.to(listItemsRef.current, {
+        x: 50,
         opacity: 0,
+        scale: 1,
         duration: 0.1,
         ease: "power3.in",
-      }
-    );
-  }
-}, [isToggled]); // Runs animation on state change
+        stagger: 0.05, // Reverse stagger
+      });
+    }
+  }, [isToggled]);
 
 
   return(
@@ -61,8 +74,10 @@ useGSAP(() => {
           <a className="text-white active font-kanit" aria-current="page" href="#">Port-Folio</a>
     </li>
     
-     <div className="flex w-40 justify-between items-center">
-    <Hamburger color="white" className="mr-4" toggled={isToggled} onToggle={handleToggle} />
+    <div className="flex w-40 justify-between items-center">
+      <span className="bg-white rounded-full p-0 hover:bg-black">
+        <Hamburger color="black" className='p-0' toggled={isToggled} onToggle={handleToggle} />
+      </span>
     <Switch/>
      </div>
     <div ref={navRef} // Attach the ref to the nav items container
@@ -71,6 +86,7 @@ useGSAP(() => {
 {navBarContentMiddle.map((item, index) => (
             <li
               key={index}
+              ref={(el) => (listItemsRef.current[index] = el)} 
               className="w-40 h-8 bg-DarkColor text-lg list-none m-2 hover:scale-105 hover:cursor transition-all"
             >
               <Link

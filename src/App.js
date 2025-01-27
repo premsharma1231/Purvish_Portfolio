@@ -17,74 +17,79 @@ function AnimatedRoutes() {
 
   return (
     <AnimatePresence mode="wait">
-      <Routes location={location} key={location.pathname}>
-        <Route
-          path="/"
-          element={
-            <motion.div
-              initial={{ x: '-100vw' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100vw' }}
-              transition={{ duration: 0.5 }}
-            >
-              <Content />
-            </motion.div>
-          }
-        />
-        <Route
-          path="/about"
-          element={
-            <motion.div
-              initial={{ x: '100vw' }}
-              animate={{ x: 0 }}
-              exit={{ x: '-100vw' }}
-              transition={{ duration: 0.5 }}
-            >
-              <About />
-            </motion.div>
-          }
-        />
-        <Route
-          path="/resume"
-          element={
-            <motion.div
-              initial={{ x: '-100vw' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100vw' }}
-              transition={{ duration: 0.5 }}
-            >
-              <Resume />
-            </motion.div>
-          }
-        />
-        <Route
-          path="/projects"
-          element={
-            <motion.div
-              initial={{ x: '100vw' }}
-              animate={{ x: 0 }}
-              exit={{ x: '-100vw' }}
-              transition={{ duration: 0.5 }}
-            >
-              <Projects />
-            </motion.div>
-          }
-        />
-        <Route
-          path="/LetsTalk"
-          element={
-            <motion.div
-            initial={{ x: '-100vw' }}
-            animate={{ x: 0 }}
-              exit={{ x: '100vw' }}
-              transition={{ duration: 0.5 }}
-            >
-              <LetsTalk />
-            </motion.div>
-          }
-        />
-      </Routes>
-    </AnimatePresence>
+  <Routes location={location} key={location.pathname}>
+    {/* Home Route */}
+    <Route
+      path="/"
+      element={
+        <motion.div
+          initial={{ x: '100vw' }}
+          animate={{ x: 0 }}
+          exit={{ x: '-100vw' }}
+          transition={{ type: 'spring', stiffness: 200, duration: 0.1 }}
+        >
+          <Content />
+        </motion.div>
+      }
+    />
+    {/* About Route */}
+    <Route
+      path="/about"
+      element={
+        <motion.div
+          initial={{ x: '100vw' }}
+          animate={{ x: 0 }}
+          exit={{ x: '-100vw' }}
+          transition={{ type: 'spring', stiffness: 200, duration: 0.1 }}
+        >
+          <About />
+        </motion.div>
+      }
+    />
+    {/* Resume Route */}
+    <Route
+      path="/resume"
+      element={
+        <motion.div
+          initial={{ x: '-100vw' }}
+          animate={{ x: 0 }}
+          exit={{ x: '100vw' }}
+          transition={{ type: 'spring', stiffness: 200, duration: 0.1 }}
+        >
+          <Resume />
+        </motion.div>
+      }
+    />
+    {/* Projects Route */}
+    <Route
+      path="/projects"
+      element={
+        <motion.div
+          initial={{ x: '100vw' }}
+          animate={{ x: 0 }}
+          exit={{ x: '-100vw' }}
+          transition={{ type: 'spring', stiffness: 200, duration: 0.1 }}
+        >
+          <Projects />
+        </motion.div>
+      }
+    />
+    {/* Let's Talk Route */}
+    <Route
+      path="/letstalk"
+      element={
+        <motion.div
+          initial={{ x: '-100vw' }}
+          animate={{ x: 0 }}
+          exit={{ x: '100vw' }}
+          transition={{ type: 'spring', stiffness: 200, duration: 0.1 }}
+        >
+          <LetsTalk />
+        </motion.div>
+      }
+    />
+  </Routes>
+</AnimatePresence>
   );
 }
 

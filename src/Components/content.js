@@ -14,7 +14,7 @@ const Content = () => {
     const text2 = "Purvish Sharma";
     const text3 = "BUT YOU CAN CALL ME";
     const text4 = "PREM";
-    const text = "I am a Frontend Web Developer and also a trainer in the BPO/KPO sector. <br/>Additionally, I have experience as a Quality Analyst<br/>, Auditor, and Research Analyst.";
+    const text = "I am a Frontend Web Developer <br/>A Trainer in the BPO/KPO Company.<br/>Experienced as a Quality Analyst<br/>Auditor, and Research Analyst.";
     
     useEffect(() => {
             new Typewriter('#typewriter', {
@@ -22,21 +22,19 @@ const Content = () => {
                 autoStart: true,
                 loop:false,
                 cursor: '|',
+                deleteSpeed: 90,
+                delay: 100,
             }).pasteString(text);
-             // Instantly inserts the string without typing animation
-            // .start();
     });
 
-    
-    
 
     return(
         <>
-            {/* <div className="flex flex-row absolute top-52 right-28 text-center w-full md:w-auto"> */}
-            <div className="absolute top-48">
-                <img src={Image} className="w-full" alt="No Image"/>
+        <div className="absolute flex w-full justify-around align-middle items-start bottom-0">
+            <div className="">
+                <img src={Image} className="w-full h-full" alt="No Image"/>
             </div>
-            <div className="absolute top-80 w-10/12 -right-24 text-center">
+            <div className="flex flex-col justify-center items-center mt-28 text-center">
                 <h1 className="font-Teko font-extrabold text-6xl">
                     <span className="">{text1} </span>
                     <span id="typewriter2" className="font-Teko underline">{text2}<br/></span>
@@ -44,11 +42,11 @@ const Content = () => {
                     <span className="">{text3} </span>
                     <span id="typewriter3" className="font-Teko underline">{text4}</span>
                 </h1>
-                <div className="text-2xl text-center font-bold">
+                <div id="" className="w-300px text-2xl font-bold">
                     <span id="typewriter" className=""></span>
                 </div>
-            {/* </div> */}
             </div>
+        </div>
         </>
     );
 };
