@@ -14,18 +14,17 @@ const Cursor = () => {
     return (
         <>
         <div
-        className="fixed w-1 h-1 border-none bg-black opacity-65 rounded-full pointer-events-none transition-all duration-0 ease-out z-50"
+        className="fixed w-6 h-6 border-none bg-black opacity-40 rounded-full pointer-events-none transition-all duration-0 ease-out z-50"
         style={{
-                left: `${position.x - 2}px`,
-                top: `${position.y - 2}px`,
+                left: `${position.x - 12}px`,
+                top: `${position.y - 12}px`,
             }}
             />
         <div
-            className="fixed w-2 h-2 p-3 z-50 border-black border-2 rounded-full pointer-events-none transition-all duration-75 ease-out"
+            className="fixed w-2 h-2 p-3 z-40 border-none opacity-65 bg-yellow-500 rounded-full pointer-events-none transition-all duration-100 ease-out"
             style={{
-                left: `${position.x - 19}px`,
-                top: `${position.y - 19}px`,
-                // mixBlendMode: 'difference',
+                left: `${position.x - 17}px`,
+                top: `${position.y - 17}px`,
             }}
             />
         </>

@@ -8,6 +8,7 @@ import Typewriter from 'typewriter-effect/dist/core';
 
 const Content = () => {
     document.body.style.overflow = 'hidden';
+    document.body.style.cursor = 'none';
 
     // const text1 = "HEY I AM ";
     // const text2 = "Purvish Sharma";
