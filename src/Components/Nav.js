@@ -29,7 +29,7 @@ function Navbar(){
 
   
   let navBarContentMiddle = [
-    { name: "HOME", path: "/home" },
+    { name: "HOME", path: "/" },
     { name: "ABOUT", path: "/about" },
     // { name: "RESUME", path: "/resume" },
     { name: "PROJECTS", path: "/projects" },

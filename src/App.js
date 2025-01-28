@@ -20,7 +20,7 @@ function AnimatedRoutes() {
   <Routes location={location} key={location.pathname}>
     {/* Home Route */}
     <Route
-      path="/home"
+      path="/"
       element={
         <motion.div
           initial={{ x: '100vw' }}
