@@ -31,7 +31,7 @@ function Navbar(){
   let navBarContentMiddle = [
     { name: "HOME", path: "/home" },
     { name: "ABOUT", path: "/about" },
-    { name: "RESUME", path: "/resume" },  
+    // { name: "RESUME", path: "/resume" },
     { name: "PROJECTS", path: "/projects" },
     { name: "LET'S TALK?", path: "/LetsTalk" },
   ]
@@ -47,9 +47,9 @@ function Navbar(){
           x: 0,
           opacity: 1,
           scale: 1,
-          duration: 0.5,
+          duration: 0.1,
           ease: "bounce.out",
-          stagger: 0.2, // Delay between each item animation
+          stagger: 0.05, // Delay between each item animation
         }
       );
     } else {
@@ -69,14 +69,14 @@ function Navbar(){
   return(
 
     <>
-    <div className="flex justify-between items-center bg-DarkColor px-4 py-4">
+    <div className="flex justify-between items-center px-4 py-4 ml-5">
     <li className="text-5xl ml-6 hover:scale-105 transition-all list-none">
-          <a className="text-white active font-kanit" aria-current="page" href="#">Port-Folio</a>
+          <a className="text-DarkColor active font-kanit font-bold" aria-current="page" href="#">HOME</a>
     </li>
     
     <div className="flex w-40 justify-between items-center">
-      <span className="bg-white rounded-full p-0 hover:bg-black">
-        <Hamburger color="black" className='p-0' toggled={isToggled} onToggle={handleToggle} />
+      <span className="bg-DarkColor rounded-full p-0">
+        <Hamburger color="white" className='p-0' toggled={isToggled} onToggle={handleToggle} />
       </span>
     <Switch/>
      </div>

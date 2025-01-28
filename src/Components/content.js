@@ -5,51 +5,60 @@ import "@fontsource/rubik-vinyl";
 import "@fontsource/karla";
 import "@fontsource/teko";
 import Typewriter from 'typewriter-effect/dist/core';
-import Image from './Image.png';
-
 
 const Content = () => {
     document.body.style.overflow = 'hidden';
-    const text1 = "HEY I AM";
-    const text2 = "Purvish Sharma";
-    const text3 = "BUT YOU CAN CALL ME";
-    const text4 = "PREM";
-    const text = "I am a Frontend Web Developer <br/>A Trainer in the BPO/KPO Company.<br/>Experienced as a Quality Analyst<br/>Auditor, and Research Analyst.";
-    
+
+    // const text1 = "HEY I AM ";
+    // const text2 = "Purvish Sharma";
+    // const text3 = "BUT YOU CAN CALL ME ";
+    // const text4 = "PREM";
+    // const description = "Am a Trainer-Auditor at KPO/BPO Company|| Quality Analyst || Research Analyst || Frontend Web Developer.";
+
     useEffect(() => {
-            new Typewriter('#typewriter', {
-                strings: [text],
-                autoStart: true,
-                loop:false,
-                cursor: '|',
-                deleteSpeed: 90,
-                delay: 100,
-            }).pasteString(text);
+        new Typewriter('#description', {
+            strings: ["Front-end Web Developer.", "Trainer at KPO/BPO Company.", "full time Quality Analyst.", "Auditor."],
+            autoStart: true,
+            loop:true,
+            cursor: '|',
+            deleteSpeed: 10,
+            delay: 90,
+        });
+        // new Typewriter('#meraname', {
+        //     strings: ["Sharma Purvish"],
+        //     autoStart: true,
+        //     loop:true,
+        //     cursor: '|',
+        //     deleteSpeed: 10,
+        //     delay: 30,
+        // });
+        // new Typewriter('#premname', {
+        //     strings: ["PREM"],
+        //     autoStart: true,
+        //     loop:true,
+        //     cursor: '|',
+        //     deleteSpeed: 10,
+        //     delay: 30,
+        // });
     });
 
+        // const typewriter = new Typewriter('#typewriter', {
+        //     autoStart: true,
+        //     loop: false,
+        //     cursor: null,
+        //     delay: 30, // Typing speed
+        // });
 
-    return(
+
+    return (
         <>
-        <div className="absolute flex w-full justify-around align-middle items-start bottom-0">
-            <div className="">
-                <img src={Image} className="w-full h-full" alt="No Image"/>
-            </div>
-            <div className="flex flex-col justify-center items-center mt-28 text-center">
-                <h1 className="font-Teko font-extrabold text-6xl">
-                    <span className="">{text1} </span>
-                    <span id="typewriter2" className="font-Teko underline">{text2}<br/></span>
-                    {/* <br/> */}
-                    <span className="">{text3} </span>
-                    <span id="typewriter3" className="font-Teko underline">{text4}</span>
-                </h1>
-                <div id="" className="w-300px text-2xl font-bold">
-                    <span id="typewriter" className=""></span>
+                <div id="typewriter" className="flex flex-col mt-12 justify-center items-center text-center">
+                    <span class="font-Teko font-extrabold text-6xl heyiam">HEY I AM <span id="meraname" class="underline">Purvish Sharma</span></span>
+                    <span class="font-Teko font-extrabold text-6xl">BUT YOU CAN CALL ME <span id="premname" class="underline">Prem</span></span>
+                <span class="w-2/3 m-auto text-2xl font-bold mt-4">Am a <span id="description" class="font-Karla text-yellow-500 font-bold bg-black"></span></span>
                 </div>
-            </div>
-        </div>
         </>
     );
 };
-
 
 export default Content;

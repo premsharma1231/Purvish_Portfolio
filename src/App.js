@@ -6,7 +6,7 @@ import Platforms from './Components/Platforms';
 import Content from './Components/content';
 import Cursor from './Components/cursor';
 import About from './Components/about';
-import Resume from './Components/resume';
+// import Resume from './Components/resume';
 import Projects from './Components/projects';
 import LetsTalk from './Components/letstalk';
 import {BrowserRouter as Router, Route, Routes, useLocation} from "react-router-dom";
@@ -20,7 +20,7 @@ function AnimatedRoutes() {
   <Routes location={location} key={location.pathname}>
     {/* Home Route */}
     <Route
-      path="/"
+      path="/home"
       element={
         <motion.div
           initial={{ x: '100vw' }}
@@ -47,7 +47,7 @@ function AnimatedRoutes() {
       }
     />
     {/* Resume Route */}
-    <Route
+    {/* <Route
       path="/resume"
       element={
         <motion.div
@@ -59,7 +59,7 @@ function AnimatedRoutes() {
           <Resume />
         </motion.div>
       }
-    />
+    /> */}
     {/* Projects Route */}
     <Route
       path="/projects"
@@ -97,7 +97,7 @@ function App() {
   document.body.style.backgroundColor = '#ECDFCC';
   // document.body.style.overflow = 'hidden';
   return (
-    <Router>
+    <Router>  
       <Navbar />
       <Platforms />
       <Cursor />

@@ -4,10 +4,14 @@ import "@fontsource/rubik-vinyl";
 import "@fontsource/karla";
 import "../App.css";
 import "../index.css";
+import Tilt from 'react-parallax-tilt';
 
 function Projectcard({ title, description, GithubUrl, LiveUrl, urlToImage }) {
+  document.body.style.cursor = "none";
   return (
-    <div className="border-none card w-5/12 bg-gray-300 flex flex-col justify-between text-center font-Karla">
+    <>
+    <Tilt className="card flex flex-col justify-between w-5/12 h-8/12 bg-gray-300 text-center font-Karla border-none shadow" perspective={1500} glareEnable={true} tiltMaxAngleX={5} tiltMaxAngleY={5} glareMaxOpacity={0.10}>
+    <div>
       <img src={urlToImage} className="card-img-top p-2 pb-0" alt={title} />
       <div className="card-body">
         <h5 className="card-title p-2 rounded-lg text-4xl font-bold font-kanit">{title}</h5>
@@ -18,6 +22,8 @@ function Projectcard({ title, description, GithubUrl, LiveUrl, urlToImage }) {
         </div>
       </div>
     </div>
+    </Tilt>
+    </>
   );
 }
 

@@ -1,5 +1,6 @@
 import React from "react";
 import Projectcard from "./projectcard";
+// import Tilt from 'react-parallax-tilt';
 
 function Projects() {
   document.body.style.overflowX = "hidden";
@@ -73,7 +74,13 @@ function Projects() {
   ];
 
   return (
-    <div className="mt-9 top-40 ml-24 pb-36 flex flex-wrap justify-center gap-8">
+    <>
+    <div className="m-12 relative">
+      <h1 className=" text-5xl text-center font-Karla font-bold">My-Projects</h1>
+      {/* <span className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-40 h-1 bg-black"></span>
+      <span className="absolute top-full left-1/2 transform -translate-x-1/2 mt-4 w-32 h-1 bg-black"></span> */}
+    </div>
+    <div className="ml-24 pb-36 flex flex-wrap justify-center gap-8">
       {Objects.map((project, index) => (
         <Projectcard
           key={index}
@@ -85,6 +92,7 @@ function Projects() {
         />
       ))}
     </div>
+    </>
   );
 }
 
