@@ -1,8 +1,14 @@
 {
   "files": {
-    "main.css": "/Purvish_Portfolio/static/css/main.0b1d9cc0.css",
-    "main.js": "/Purvish_Portfolio/static/js/main.c753a78b.js",
+    "main.css": "/Purvish_Portfolio/static/css/main.c03140e1.css",
+    "main.js": "/Purvish_Portfolio/static/js/main.66dd129a.js",
     "static/js/453.7fa96a4c.chunk.js": "/Purvish_Portfolio/static/js/453.7fa96a4c.chunk.js",
+    "static/media/InterVariable-Italic.woff2": "/Purvish_Portfolio/static/media/InterVariable-Italic.e295f70fe3e2df296c7b.woff2",
+    "static/media/InterVariable.woff2": "/Purvish_Portfolio/static/media/InterVariable.a0e477f2f1f9d2376fde.woff2",
+    "static/media/primeicons.svg": "/Purvish_Portfolio/static/media/primeicons.6ed59f962963a4a73af2.svg",
+    "static/media/primeicons.eot": "/Purvish_Portfolio/static/media/primeicons.ff0c4cd79b2ffca2de54.eot",
+    "static/media/primeicons.woff": "/Purvish_Portfolio/static/media/primeicons.8931fda1930c3bd21e96.woff",
+    "static/media/primeicons.ttf": "/Purvish_Portfolio/static/media/primeicons.a5c2a53d1ff7a9ff5933.ttf",
     "static/media/rubik-vinyl-latin-400-normal.woff": "/Purvish_Portfolio/static/media/rubik-vinyl-latin-400-normal.250edfff990a5b3dd758.woff",
     "static/media/rubik-vinyl-latin-400-normal.woff2": "/Purvish_Portfolio/static/media/rubik-vinyl-latin-400-normal.84f3dfdeaaec06fcbe3b.woff2",
     "static/media/teko-devanagari-400-normal.woff": "/Purvish_Portfolio/static/media/teko-devanagari-400-normal.14230e1e2441b550ada1.woff",
@@ -11,6 +17,7 @@
     "static/media/rubik-vinyl-latin-ext-400-normal.woff2": "/Purvish_Portfolio/static/media/rubik-vinyl-latin-ext-400-normal.a86ef2940dba112b6d73.woff2",
     "static/media/rubik-vinyl-cyrillic-400-normal.woff2": "/Purvish_Portfolio/static/media/rubik-vinyl-cyrillic-400-normal.2d95f860bea546a5f773.woff2",
     "static/media/rubik-vinyl-cyrillic-ext-400-normal.woff": "/Purvish_Portfolio/static/media/rubik-vinyl-cyrillic-ext-400-normal.375ab229cc8257a4d006.woff",
+    "static/media/primeicons.woff2": "/Purvish_Portfolio/static/media/primeicons.024b32cc7bf399b1a847.woff2",
     "static/media/rubik-vinyl-cyrillic-ext-400-normal.woff2": "/Purvish_Portfolio/static/media/rubik-vinyl-cyrillic-ext-400-normal.68022d4f8c5345dfd76b.woff2",
     "static/media/teko-devanagari-400-normal.woff2": "/Purvish_Portfolio/static/media/teko-devanagari-400-normal.ef63782b5009a41ebaed.woff2",
     "static/media/rubik-vinyl-hebrew-400-normal.woff": "/Purvish_Portfolio/static/media/rubik-vinyl-hebrew-400-normal.ddaecbc0c6bd274906df.woff",
@@ -24,12 +31,12 @@
     "static/media/teko-latin-ext-400-normal.woff": "/Purvish_Portfolio/static/media/teko-latin-ext-400-normal.dbce40a139d4adaa5292.woff",
     "static/media/teko-latin-ext-400-normal.woff2": "/Purvish_Portfolio/static/media/teko-latin-ext-400-normal.f3bdc2ab34878ce090f1.woff2",
     "index.html": "/Purvish_Portfolio/index.html",
-    "main.0b1d9cc0.css.map": "/Purvish_Portfolio/static/css/main.0b1d9cc0.css.map",
-    "main.c753a78b.js.map": "/Purvish_Portfolio/static/js/main.c753a78b.js.map",
+    "main.c03140e1.css.map": "/Purvish_Portfolio/static/css/main.c03140e1.css.map",
+    "main.66dd129a.js.map": "/Purvish_Portfolio/static/js/main.66dd129a.js.map",
     "453.7fa96a4c.chunk.js.map": "/Purvish_Portfolio/static/js/453.7fa96a4c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0b1d9cc0.css",
-    "static/js/main.c753a78b.js"
+    "static/css/main.c03140e1.css",
+    "static/js/main.66dd129a.js"
   ]
 }
