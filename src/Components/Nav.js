@@ -94,7 +94,6 @@ function Navbar(){
 
 
   return(
-
     <>
     <div className={`bg-${bgColor} z-50 sticky top-0 flex justify-between items-center px-4 py-4 ml-5`}>
     <li className="text-5xl ml-6 hover:scale-105 transition-all list-none">

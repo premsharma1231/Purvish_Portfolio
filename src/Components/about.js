@@ -4,12 +4,13 @@ import Button from "./button";
 import { faBootstrap, faCss, faHtml5, faJs, faReact } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Platforms from "./Platforms";
+import LetsTalk from './letstalk';
+import { Link } from "react-router-dom";
 
 
 
 function About(){
     document.body.style.overflowX = "hidden";
-    // document.body.style.overflowY = "scroll";
   return(
     <>
     <Platforms/>
@@ -29,7 +30,9 @@ function About(){
         </div>
     </div>
     <div className="mt-7">
-    <Button as="a"  filled target="_blank" rel="noopener noreferrer">Let's Work Together!</Button>
+    <Button as="a"  filled target="_blank" rel="noopener noreferrer">
+        <Link to={LetsTalk}>Let's Work Together?</Link>
+    </Button>
     </div>
 
 
