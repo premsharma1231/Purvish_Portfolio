@@ -19,7 +19,7 @@ function Platforms(){
   <a href="https://github.com/premsharma1231" 
   target="_blank" 
   rel="noopener noreferrer"><FontAwesomeIcon 
-    className="w-8 h-8 bg-black text-white hover:bg-white hover:text-black rounded-full transition-all p-2 hover:cursor-pointer" 
+    className="w-8 h-8 text-black  hover:text-gray-700 rounded-full transition-all p-2 hover:cursor-pointer" 
     icon={faGithub}
     // bounce
   /></a>
@@ -28,7 +28,7 @@ function Platforms(){
   <a href="https://www.linkedin.com/in/sharma-purvish-591120248/" 
   target="_blank" 
   rel="noopener noreferrer"><FontAwesomeIcon 
-    className="w-8 h-8 bg-black text-white hover:bg-white hover:text-black rounded-full transition-all p-2 hover:cursor-pointer" 
+    className="w-8 h-8 text-black  hover:text-gray-700 rounded-full transition-all p-2 hover:cursor-pointer" 
     icon={faLinkedin} 
     // bounce 
   /></a>
@@ -37,16 +37,16 @@ function Platforms(){
   <a href="mailto:premsharma786zx@gmail.com" 
   target="_blank" 
   rel="noopener noreferrer"><FontAwesomeIcon 
-    className="w-8 h-8 bg-black text-white hover:bg-white hover:text-black rounded-full transition-all p-2 hover:cursor-pointer"
+    className="w-8 h-8 text-black  hover:text-gray-700 rounded-full transition-all p-2 hover:cursor-pointer"
     icon={faEnvelope} 
-    // bounce 
+    // bounce
   /></a>
 
   {/* Instagram Icon */}
   <a href="https://www.instagram.com/premmsharmaaaa/" 
   target="_blank" 
   rel="noopener noreferrer"><FontAwesomeIcon 
-    className="w-8 h-8 bg-black text-white hover:bg-white hover:text-black rounded-full transition-all p-2 hover:cursor-pointer" 
+    className="w-8 h-8 text-black  hover:text-gray-700 rounded-full transition-all p-2 hover:cursor-pointer" 
     icon={faInstagram}
     // bounce
   /></a>

@@ -100,7 +100,7 @@ function App() {
     <>
     <Router>
     <Navbar />
-    {/* <Platforms /> */}
+    <Platforms />
     <Cursor />
     <AnimatedRoutes />
     </Router>
