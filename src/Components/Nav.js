@@ -12,11 +12,19 @@ import { Link } from "react-router-dom";
 
 gsap.registerPlugin(useGSAP);
 
-
-
-
 function Navbar(){
+  document.body.style.cursor = 'none'
   const [isToggled, setIsToggled] = useState(false);
+  const [NavBarText, setNavBarText] = useState(() => {
+    return localStorage.getItem("NavBarText") || "Home"; // Default to "Home"
+  });
+
+  useEffect(() => {
+    localStorage.setItem("NavBarText", NavBarText);
+  }, [NavBarText]);
+
+  
+  const [bgColor, setBgColor] = useState("");
   const navRef = useRef(null);
   const timeline = gsap.timeline();
   const listItemsRef = useRef([]);
@@ -29,17 +37,33 @@ function Navbar(){
 
   
   let navBarContentMiddle = [
-    { name: "HOME", path: "/" },
-    { name: "ABOUT", path: "/about" },
-    // { name: "RESUME", path: "/resume" },
-    { name: "PROJECTS", path: "/projects" },
-    { name: "LET'S TALK?", path: "/LetsTalk" },
+    { name: "HOME", path: "/Purvish_Portfolio"},
+    { name: "ABOUT", path: "/Purvish_Portfolio/about"},
+    // { name: "RESUME", path: "/resume",  },
+    { name: "PROJECTS", path: "/Purvish_Portfolio/projects"},
+    { name: "LET'S TALK?", path: "/Purvish_Portfolio/LetsTalk"},
   ]
 
 
   useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      
+      // Change color based on scroll position
+      if (scrollY < 200) {
+        setBgColor("none");
+      } else if (scrollY < 400) {
+        setBgColor("yellow-50");
+      } else {
+        setBgColor("yellow-50");
+      }
+    };
+    
+    window.addEventListener("scroll", handleScroll);
+    
+    
+    
     if (isToggled) {
-      // Stagger animation for items
       gsap.fromTo(
         listItemsRef.current,
         { x: 50, opacity: 0, scale: 1 }, // Starting position
@@ -63,15 +87,18 @@ function Navbar(){
         stagger: 0.05, // Reverse stagger
       });
     }
+
+
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [isToggled]);
 
 
   return(
 
     <>
-    <div className="flex justify-between items-center px-4 py-4 ml-5">
+    <div className={`bg-${bgColor} z-50 sticky top-0 flex justify-between items-center px-4 py-4 ml-5`}>
     <li className="text-5xl ml-6 hover:scale-105 transition-all list-none">
-          <a className="text-DarkColor active font-kanit font-bold" aria-current="page" href="#">HOME</a>
+          <a className="text-DarkColor active font-kanit font-bold" aria-current="page" href="#">{NavBarText}</a>
     </li>
     
     <div className="flex w-40 justify-between items-center">
@@ -86,12 +113,12 @@ function Navbar(){
 {navBarContentMiddle.map((item, index) => (
             <li
               key={index}
-              ref={(el) => (listItemsRef.current[index] = el)} 
-              className="w-40 h-8 bg-DarkColor text-lg list-none m-2 hover:scale-105 hover:cursor transition-all"
+              ref={(el) => (listItemsRef.current[index] = el)}
+              className="w-40 h-8 bg-DarkColor text-lg list-none m-2 hover:scale-105 transition-all"
             >
               <Link
-                className="text-white active font-Karla transition-all"
-                to={item.path}
+                className="text-white active font-Karla transition-all hover:cursor-none"
+                to={item.path} onClick={() => setNavBarText(item.name)}
               >
                 {item.name}
               </Link>

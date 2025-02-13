@@ -10,7 +10,7 @@ function Platforms(){
     return(
         <>
         {/* hover:left-7 hover:w-9 hover:h-9 */}
-        <div className="ml-5 flex flex-col w-12 items-center absolute bottom-4">
+        <div className="ml-5 flex flex-col w-12 items-center fixed bottom-4">
         
         {/* <span className="absolute top-0 h-28 w-2 z-10 bg-gray-900 rounded-b"></span> */}
 
@@ -19,36 +19,36 @@ function Platforms(){
   <a href="https://github.com/premsharma1231" 
   target="_blank" 
   rel="noopener noreferrer"><FontAwesomeIcon 
-    className="w-8 h-8 transition-all p-2 hover:cursor-pointer" 
+    className="w-8 h-8 bg-black text-white hover:bg-white hover:text-black rounded-full transition-all p-2 hover:cursor-pointer" 
     icon={faGithub}
-    bounce
+    // bounce
   /></a>
 
   {/* LinkedIn Icon */}
   <a href="https://www.linkedin.com/in/sharma-purvish-591120248/" 
   target="_blank" 
   rel="noopener noreferrer"><FontAwesomeIcon 
-    className="w-8 h-8 transition-all p-2 hover:cursor-pointer" 
+    className="w-8 h-8 bg-black text-white hover:bg-white hover:text-black rounded-full transition-all p-2 hover:cursor-pointer" 
     icon={faLinkedin} 
-    bounce 
+    // bounce 
   /></a>
 
   {/* Email Icon */}
   <a href="mailto:premsharma786zx@gmail.com" 
   target="_blank" 
   rel="noopener noreferrer"><FontAwesomeIcon 
-    className="w-8 h-8 transition-all p-2 hover:cursor-pointer"
+    className="w-8 h-8 bg-black text-white hover:bg-white hover:text-black rounded-full transition-all p-2 hover:cursor-pointer"
     icon={faEnvelope} 
-    bounce 
+    // bounce 
   /></a>
 
   {/* Instagram Icon */}
   <a href="https://www.instagram.com/premmsharmaaaa/" 
   target="_blank" 
   rel="noopener noreferrer"><FontAwesomeIcon 
-    className="w-8 h-8 transition-all p-2 hover:cursor-pointer" 
+    className="w-8 h-8 bg-black text-white hover:bg-white hover:text-black rounded-full transition-all p-2 hover:cursor-pointer" 
     icon={faInstagram}
-    bounce
+    // bounce
   /></a>
 </div>
 
