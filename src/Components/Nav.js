@@ -50,9 +50,9 @@ function Navbar(){
       const scrollY = window.scrollY;
       
       // Change color based on scroll position
-      if (scrollY < 200) {
+      if (scrollY < 50) {
         setBgColor("none");
-      } else if (scrollY < 400) {
+      } else if (scrollY < 50) {
         setBgColor("yellow-50");
       } else {
         setBgColor("yellow-50");
@@ -95,7 +95,7 @@ function Navbar(){
 
   return(
     <>
-    <div className={`bg-${bgColor} z-50 sticky top-0 flex justify-between items-center px-4 py-4 ml-5`}>
+    <div className={`bg-${bgColor} transition-all z-50 sticky top-0 flex justify-between items-center px-4 py-4 pl-5`}>
     <li className="text-5xl ml-6 hover:scale-105 transition-all list-none">
           <a className="text-DarkColor active font-kanit font-bold" aria-current="page" href="#">{NavBarText}</a>
     </li>
