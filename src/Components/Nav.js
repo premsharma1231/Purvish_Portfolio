@@ -16,7 +16,7 @@ function Navbar(){
   document.body.style.cursor = 'none'
   const [isToggled, setIsToggled] = useState(false);
   const [NavBarText, setNavBarText] = useState(() => {
-    return localStorage.getItem("NavBarText") || "Home"; // Default to "Home"
+    return localStorage.getItem("NavBarText") || "Home";
   });
 
   useEffect(() => {
@@ -99,7 +99,6 @@ function Navbar(){
     <li className="text-5xl ml-6 hover:scale-105 transition-all list-none">
           <a className="text-DarkColor active font-kanit font-bold" aria-current="page" href="#">{NavBarText}</a>
     </li>
-    
     <div className="flex w-40 justify-between items-center">
       <span className="bg-DarkColor rounded-full p-0">
         <Hamburger color="white" className='p-0' toggled={isToggled} onToggle={handleToggle} />
@@ -116,7 +115,7 @@ function Navbar(){
               className="w-40 h-8 bg-DarkColor text-lg list-none m-2 hover:scale-105 transition-all"
             >
               <Link
-                className="text-white active font-Karla transition-all hover:cursor-none"
+                className="text-white active font-Karla transition-all"
                 to={item.path} onClick={() => setNavBarText(item.name)}
               >
                 {item.name}

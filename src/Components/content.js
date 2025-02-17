@@ -5,52 +5,21 @@ import "@fontsource/rubik-vinyl";
 import "@fontsource/karla";
 import "@fontsource/teko";
 import Typewriter from 'typewriter-effect/dist/core';
-import Platforms from "./Platforms";
 
 const Content = () => {
     document.body.style.overflow = 'hidden';
     document.body.style.cursor = 'none';
 
-    // const text1 = "HEY I AM ";
-    // const text2 = "Purvish Sharma";
-    // const text3 = "BUT YOU CAN CALL ME ";
-    // const text4 = "PREM";
-    // const description = "Am a Trainer-Auditor at KPO/BPO Company|| Quality Analyst || Research Analyst || Frontend Web Developer.";
-
     useEffect(() => {
         new Typewriter('#description', {
-            strings: ["Front-end Web Developer.", "Trainer at KPO/BPO Company.", "Also a freeLancer","full time Quality Analyst.", "Auditor."],
+            strings: ["Front-end Web Developer.", "Trainer at KPO/BPO Company.", "Also a freeLancer.","full time Quality Analyst.", "Auditor."],
             autoStart: true,
             loop:true,
             cursor: '|',
             deleteSpeed: 10,
             delay: 90,
         });
-        // new Typewriter('#meraname', {
-        //     strings: ["Sharma Purvish"],
-        //     autoStart: true,
-        //     loop:true,
-        //     cursor: '|',
-        //     deleteSpeed: 10,
-        //     delay: 30,
-        // });
-        // new Typewriter('#premname', {
-        //     strings: ["PREM"],
-        //     autoStart: true,
-        //     loop:true,
-        //     cursor: '|',
-        //     deleteSpeed: 10,
-        //     delay: 30,
-        // });
     });
-
-        // const typewriter = new Typewriter('#typewriter', {
-        //     autoStart: true,
-        //     loop: false,
-        //     cursor: null,
-        //     delay: 30, // Typing speed
-        // });
-
 
     return (
         <>

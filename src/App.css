@@ -6,3 +6,89 @@
 @import 'primeicons/primeicons.css'; /* Icons */
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&family=Karla&family=Teko&family=Anton&family=Bungee&display=swap');
 /* Wrapper class for isolation */
+
+*{
+    cursor: none;
+}
+
+.github-calendar {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Custom grid colors */
+  .github-calendar .day {
+    width: 18px !important;
+    height: 18px !important;
+    border-radius: 4px;
+    margin: 3px !important;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  /* Adding hover effect */
+  .github-calendar .day:hover {
+    transform: scale(1.2);
+    border: 1px solid white;
+  }
+  
+  /* Custom colors for contributions */
+  .github-calendar .day[data-level="0"] {
+    background: #2d2d2d;
+  }
+  .github-calendar .day[data-level="1"] {
+    background: #642b73;
+  }
+  .github-calendar .day[data-level="2"] {
+    background: #c084f5;
+  }
+  .github-calendar .day[data-level="3"] {
+    background: #e04ed1;
+  }
+  .github-calendar .day[data-level="4"] {
+    background: #f1009c;
+  }
+  
+
+  /* 📌 Custom GitHub Contribution Calendar */
+.github-calendar {
+    background: transparent !important;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* 📌 Custom Grid Styling */
+  .github-calendar .day {
+    width: 15px !important;  /* Adjust box size */
+    height: 15px !important;
+    margin: 3px !important; /* Add spacing between boxes */
+    border-radius: 3px; /* Rounded corners */
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  /* 🎨 Custom color shades */
+  .github-calendar .day[data-level="0"] {
+    background: #1e1e1e !important; /* Dark theme */
+  }
+  .github-calendar .day[data-level="1"] {
+    background: #642b73 !important;
+  }
+  .github-calendar .day[data-level="2"] {
+    background: #8750e0 !important;
+  }
+  .github-calendar .day[data-level="3"] {
+    background: #b184f5 !important;
+  }
+  .github-calendar .day[data-level="4"] {
+    background: #dab6ff !important;
+  }
+  
+  /* 🔥 Hover effect */
+  .github-calendar .day:hover {
+    transform: scale(1.2);
+    border: 1px solid white;
+  }
+  
