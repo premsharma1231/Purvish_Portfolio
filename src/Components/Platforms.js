@@ -10,7 +10,7 @@ function Platforms(){
     return(
         <>
         {/* hover:left-7 hover:w-9 hover:h-9 */}
-        <div className="ml-5 flex flex-col w-12 items-center fixed bottom-4">
+        <div className="ml-5 flex flex-col w-12 items-center fixed bottom-14">
         
         {/* <span className="absolute top-0 h-28 w-2 z-10 bg-gray-900 rounded-b"></span> */}
 

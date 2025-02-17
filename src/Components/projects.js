@@ -1,5 +1,6 @@
 import React from "react";
 import Projectcard from "./projectcard";
+import FooterForAll from "./FooterForAll";
 // import Tilt from 'react-parallax-tilt';
 
 function Projects() {
@@ -92,7 +93,7 @@ function Projects() {
 
   return (
     <>
-    <div className="mt-16 ml-12 pb-20 px-8 flex flex-col justify-between gap-8">
+    <div className="mt-16 ml-20 pb-20 px-8 flex flex-wrap justify-center gap-8">
       {Objects.map((project, index) => (
         <Projectcard
           key={index}
@@ -105,6 +106,7 @@ function Projects() {
         />
       ))}
     </div>
+    <FooterForAll />
     </>
   );
 }
