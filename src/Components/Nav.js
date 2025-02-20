@@ -8,7 +8,6 @@ import { Cross as Hamburger } from 'hamburger-react'
 import { gsap } from "gsap";
 import { useGSAP } from '@gsap/react';
 import { Link, useLocation } from "react-router-dom";
-import Tooltip from '@mui/material/Tooltip';
 
 
 gsap.registerPlugin(useGSAP);
