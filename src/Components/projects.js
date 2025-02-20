@@ -93,6 +93,7 @@ function Projects() {
 
   return (
     <>
+    <div className="flex flex-col items-center">
     <div className="mt-16 ml-20 pb-20 px-8 flex flex-wrap justify-center gap-8">
       {Objects.map((project, index) => (
         <Projectcard
@@ -107,6 +108,7 @@ function Projects() {
       ))}
     </div>
     <FooterForAll />
+    </div>
     </>
   );
 }
