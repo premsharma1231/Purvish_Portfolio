@@ -36,7 +36,7 @@ function Platforms(){
   target="_blank" 
   rel="noopener noreferrer"><FontAwesomeIcon 
     className="w-8 h-8 text-black  hover:text-gray-700 rounded-full transition-all p-2 " 
-    icon={faLinkedin} 
+    icon={faLinkedin}
     // bounce 
   /></a>
   </Tooltip>
