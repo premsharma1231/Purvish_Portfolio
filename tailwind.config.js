@@ -18,6 +18,7 @@ module.exports = {
         CalcGreen: "#163300",
         CalcGreenText: "#9fe870",
         NavbarColor: "#212526",
+        DarkModeBg: "#042743",
       },
     },
   },

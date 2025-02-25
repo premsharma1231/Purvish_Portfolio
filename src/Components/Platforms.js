@@ -26,7 +26,7 @@ function Platforms(){
           rel="noopener noreferrer"><FontAwesomeIcon 
             className="w-8 h-8 text-black  hover:text-gray-700 rounded-full transition-all p-2 " 
             icon={faGithub}
-            // bounce
+            bounce
           /></a>
         </Tooltip>
 
@@ -37,7 +37,7 @@ function Platforms(){
   rel="noopener noreferrer"><FontAwesomeIcon 
     className="w-8 h-8 text-black  hover:text-gray-700 rounded-full transition-all p-2 " 
     icon={faLinkedin}
-    // bounce 
+    bounce 
   /></a>
   </Tooltip>
 
@@ -48,7 +48,7 @@ function Platforms(){
   rel="noopener noreferrer"><FontAwesomeIcon 
     className="w-8 h-8 text-black  hover:text-gray-700 rounded-full transition-all p-2 "
     icon={faEnvelope} 
-    // bounce
+    bounce
   /></a>
   </Tooltip>
   {/* Instagram Icon */}
@@ -58,7 +58,7 @@ function Platforms(){
   rel="noopener noreferrer"><FontAwesomeIcon 
     className="w-8 h-8 text-black  hover:text-gray-700 rounded-full transition-all p-2 " 
     icon={faInstagram}
-    // bounce
+    bounce
   /></a>
   </Tooltip>
 </div>

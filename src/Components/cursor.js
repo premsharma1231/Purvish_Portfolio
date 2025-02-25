@@ -20,7 +20,6 @@ const Cursor = () => {
     // Click event listener
     useEffect(() => {
         const handleClick = () => {
-            console.log("true");
             setIsClicked(true);
             setTimeout(() => setIsClicked(false), 100);
         };

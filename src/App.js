@@ -14,7 +14,8 @@ import { AnimatePresence, motion } from 'framer-motion';
 // import FooterForAll from './Components/FooterForAll';
 
 function AnimatedRoutes() {
-  const location = useLocation();
+  const location = useLocation(); 
+
 
   return (
     <AnimatePresence mode="wait">
@@ -95,7 +96,8 @@ function AnimatedRoutes() {
 }
 
 function App() {
-  document.body.style.backgroundColor = '#ECDFCC';
+  const storedWebMode = localStorage.getItem("WebMode");
+  document.body.style.backgroundColor = storedWebMode === "Light" ? "#042743" : "#ECDFCC";
   // document.body.style.overflow = 'hidden';
   return (
     <>

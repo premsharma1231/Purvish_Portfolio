@@ -6,6 +6,7 @@ import FooterForAll from "./FooterForAll";
 function Projects() {
   document.body.style.overflowX = "hidden";
   document.body.style.overflowY = "scroll";
+  localStorage.getItem("WebMode");
 
   const Objects = [
     {
