@@ -40,7 +40,13 @@
   width: 200px;
   transition: transform 0.2s;
   transform: translate(0, calc(var(--y, 0) * 1%)) scale(var(--scale, 1));
+  height: clamp(50px, 5vw, 60px);
+  width: clamp(120px, 12vw, 200px);
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  padding: clamp(6px, 1vw, 8px) clamp(12px, 2vw, 16px);
 
+
+  
   &:hover {
     --y: -5;
     --scale: 1.05;
@@ -140,4 +146,13 @@
     --textColor: #c7edef;
     --bg: hsl(0, 0%, 5%);
   }
+  
+  @media (max-width: 768px) {
+    .dir-control {
+      height: 50px;
+      width: 100px;
+      font-size: 0.8rem; /* Text thoda chhota ho jaye */
+      padding: 6px 12px;  /* Button ka padding adjust ho */
+    }
+  }    
 }

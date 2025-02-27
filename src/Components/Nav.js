@@ -100,7 +100,7 @@
               {NavBarText}
             </a>
           </li>
-          <div className="flex w-40 lg:w-40 justify-between items-center">
+          <div className="flex w-32 lg:w-40 justify-between items-center">
             <span className="bg-transparent lg:bg-DarkColor rounded-full p-0">
               <Hamburger color="black" className="p-0" toggled={isToggled} onToggle={handleToggle} />
             </span>

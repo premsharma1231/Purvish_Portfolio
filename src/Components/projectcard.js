@@ -8,14 +8,15 @@ import Tilt from 'react-parallax-tilt';
 
 function Projectcard({title, description, GithubUrl, LiveUrl, urlToImage, languageUsed }) {
   document.body.style.cursor = "none";
+  document.body.style.overflowX = "hidden";
   return (
     <>
-    <Tilt className="card flex flex-col justify-center items-center w-5/12 h-full p-2 bg-gray-300 text-center font-Karla border-none shadow" perspective={2000} glareEnable={true} tiltMaxAngleX={5} tiltMaxAngleY={5} glareMaxOpacity={0}>
+    <Tilt className="card flex flex-col justify-center items-center w-72 lg:w-5/12 h-full p-2 bg-gray-300 text-center font-Karla border-none shadow" perspective={2000} glareEnable={true} tiltMaxAngleX={5} tiltMaxAngleY={5} glareMaxOpacity={0}>
     <div className="flex flex-col">
       <img src={urlToImage} className="card-img-top w-full" alt={title} />
       <div className="card-body flex flex-col items-center justify-evenly"> 
         <div className="flex flex-col justify-between mt-2">
-        <h5 className="card-title p-2 pt-5 rounded-lg text-4xl font-bold font-kanit">{title}</h5>
+        <h5 className="card-title p-2 pt-5 rounded-lg text-2xl lg:text-4xl font-bold font-kanit">{title}</h5>
         <p className="card-text p-2 pt-5 rounded-lg">{languageUsed}</p>
         <p className="card-text p-2 pt-5 rounded-lg">{description}</p>
         <div className="flex justify-evenly p-3 pt-6">

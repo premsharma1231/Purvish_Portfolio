@@ -11,13 +11,14 @@ import Zoom from '@mui/material/Zoom';
 
 
 function Platforms(){
+  document.body.style.overflowX = "hidden";
     return(
         <>
         {/* hover:left-7 hover:w-9 hover:h-9 */}
-        <div className="overflow-x-hidden ml-0 flex flex-row w-full justify-between items-center fixed bottom-0
-        sm:flex sm:flex-row sm:fixed sm:bottom-5 sm:w-12 sm:ml-5
-        md:flex md:flex-col md:fixed md:bottom-9 md:w-12 md:ml-5 
-        lg:flex lg:flex-col lg:fixed lg:bottom-14 lg:w-12 lg:ml-5
+        <div className="overflow-x-hidden ml-0 flex flex-row w-full justify-between items-center px-2
+        sm:flex sm:flex-row sm:fixed sm:bottom-5 sm:w-12 sm:ml-5 sm:px-0
+        md:flex md:flex-col md:fixed md:bottom-9 md:w-12 md:ml-5 md:px-0
+        lg:flex lg:flex-col lg:fixed lg:bottom-14 lg:w-12 lg:ml-5 lg:px-0
         ">
         
         {/* <span className="absolute top-0 h-28 w-2 z-10 bg-gray-900 rounded-b"></span> */}
