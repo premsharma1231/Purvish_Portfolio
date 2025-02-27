@@ -14,7 +14,7 @@ function Platforms(){
     return(
         <>
         {/* hover:left-7 hover:w-9 hover:h-9 */}
-        <div className="ml-0 flex flex-row w-full justify-between items-center fixed bottom-0
+        <div className="overflow-x-hidden ml-0 flex flex-row w-full justify-between items-center fixed bottom-0
         sm:flex sm:flex-row sm:fixed sm:bottom-5 sm:w-12 sm:ml-5
         md:flex md:flex-col md:fixed md:bottom-9 md:w-12 md:ml-5 
         lg:flex lg:flex-col lg:fixed lg:bottom-14 lg:w-12 lg:ml-5
@@ -22,8 +22,8 @@ function Platforms(){
         
         {/* <span className="absolute top-0 h-28 w-2 z-10 bg-gray-900 rounded-b"></span> */}
 
-        <div className="flex flex-row justify-between items-center h-10 mt-0
-        sm:flex sm:flex-row sm:h-10 sm:mt-4
+        <div className="flex flex-row justify-between w-full items-center h-14 mt-0
+        sm:flex sm:flex-row sm:h-14 sm:mt-4
         md:flex md:flex-col md:h-64 md:mt-4
         lg:flex lg:flex-col lg:h-64 lg:mt-4
         ">
@@ -70,7 +70,6 @@ function Platforms(){
   /></a>
   </Tooltip>
 </div>
-
         </div>
         </>
     )
