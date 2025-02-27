@@ -14,6 +14,7 @@ gsap.registerPlugin(useGSAP);
 function Navbar() {
   const location = useLocation();
   document.body.style.cursor = "none";
+  document.body.style.overflowX = "none";
 
   // ✅ `WebMode` ka default value `localStorage` se lena chahiye
   const [WebMode, setWebMode] = useState(() => localStorage.getItem("WebMode") || "Light");
@@ -38,7 +39,7 @@ function Navbar() {
     setIsToggled((prevState) => !prevState);
   };
 
-  // ✅ Navbar Links
+  
   const navBarContentMiddle = [
     { name: "HOME", path: "/Purvish_Portfolio" },
     { name: "ABOUT", path: "/Purvish_Portfolio/about" },
@@ -46,7 +47,7 @@ function Navbar() {
     { name: "LET'S TALK?", path: "/Purvish_Portfolio/LetsTalk" },
   ];
 
-  // ✅ Dark Mode Toggle Fix
+  
   const toggleMode = () => {
     console.log("Toggle button clicked!"); // 👈 Debugging ke liye
     setWebMode((prevMode) => {
@@ -89,24 +90,28 @@ function Navbar() {
 
   return (
     <>
-      <div className={`${bgColor} bg-opacity-30 transition-all z-50 sticky top-0 flex justify-between items-center px-4 py-4 pl-5`}>
-        <li className="text-5xl ml-6 hover:scale-105 transition-all list-none">
+      <div className={`${bgColor} bg-opacity-30 transition-all z-50 sticky top-0 flex justify-between items-center px-0 py-4 pl-2 lg:px-4 lg:pl-5`}>
+        <li className="text-2xl ml-2 hover:scale-105 transition-all list-none
+        sm:text-3xl sm:ml-4
+        md:text-4xl md:ml-5
+        lg:text-5xl lg:ml-6
+        ">
           <a className="text-DarkColor active font-kanit font-bold" aria-current="page" href="#">
             {NavBarText}
           </a>
         </li>
-        <div className="flex w-40 justify-between items-center">
-          <span className="bg-DarkColor rounded-full p-0">
-            <Hamburger color="white" className="p-0" toggled={isToggled} onToggle={handleToggle} />
+        <div className="flex w-40 lg:w-40 justify-between items-center">
+          <span className="bg-transparent lg:bg-DarkColor rounded-full p-0">
+            <Hamburger color="black" className="p-0" toggled={isToggled} onToggle={handleToggle} />
           </span>
-          <Switch onchange={toggleMode} />
+          <Switch onClick={toggleMode} />
         </div>
         <div ref={navRef} className={`absolute top-28 right-1 transition-all text-center flex-col font-bold z-10`}>
           {navBarContentMiddle.map((item, index) => (
             <li
               key={index}
               ref={(el) => (listItemsRef.current[index] = el)}
-              className={`w-40 h-8 ${WebMode === "Light" ? "bg-gray-800" : "bg-white"} text-lg list-none m-2 hover:scale-105 transition-all`}
+              className={`w-24 text-sm p-1 lg:p-0 lg:text-lg lg:w-40 h-8  ${WebMode === "Light" ? "bg-gray-800" : "bg-white"} list-none m-2 hover:scale-105 transition-all`}
             >
               <Link className="text-white active font-Karla transition-all" to={item.path} onClick={() => setNavBarText(item.name)}>
                 {item.name}
