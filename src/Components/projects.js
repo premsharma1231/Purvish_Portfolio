@@ -96,7 +96,7 @@ function Projects() {
   return (
     <>
     <div className="flex flex-col items-center">
-    <div className="mt-16 ml-0 pb-20 px-8 flex flex-col flex-wrap justify-center gap-8 lg:flex-wrap lg:flex-row lg:ml-20 ">
+    <div className="mt-12 lg:mt-16 ml-0 pb-20 px-8 flex flex-col flex-wrap justify-center gap-8 lg:flex-wrap lg:flex-row lg:ml-20 ">
       {Objects.map((project, index) => (
         <Projectcard
           key={index}
