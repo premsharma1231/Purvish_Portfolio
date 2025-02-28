@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Purvish_Portfolio/static/css/main.c90f48ad.css",
-    "main.js": "/Purvish_Portfolio/static/js/main.c5f9815b.js",
+    "main.css": "/Purvish_Portfolio/static/css/main.2ff9a739.css",
+    "main.js": "/Purvish_Portfolio/static/js/main.f613f513.js",
     "static/js/453.7fa96a4c.chunk.js": "/Purvish_Portfolio/static/js/453.7fa96a4c.chunk.js",
     "static/media/InterVariable-Italic.woff2": "/Purvish_Portfolio/static/media/InterVariable-Italic.e295f70fe3e2df296c7b.woff2",
     "static/media/InterVariable.woff2": "/Purvish_Portfolio/static/media/InterVariable.a0e477f2f1f9d2376fde.woff2",
@@ -31,12 +31,12 @@
     "static/media/teko-latin-ext-400-normal.woff": "/Purvish_Portfolio/static/media/teko-latin-ext-400-normal.dbce40a139d4adaa5292.woff",
     "static/media/teko-latin-ext-400-normal.woff2": "/Purvish_Portfolio/static/media/teko-latin-ext-400-normal.f3bdc2ab34878ce090f1.woff2",
     "index.html": "/Purvish_Portfolio/index.html",
-    "main.c90f48ad.css.map": "/Purvish_Portfolio/static/css/main.c90f48ad.css.map",
-    "main.c5f9815b.js.map": "/Purvish_Portfolio/static/js/main.c5f9815b.js.map",
+    "main.2ff9a739.css.map": "/Purvish_Portfolio/static/css/main.2ff9a739.css.map",
+    "main.f613f513.js.map": "/Purvish_Portfolio/static/js/main.f613f513.js.map",
     "453.7fa96a4c.chunk.js.map": "/Purvish_Portfolio/static/js/453.7fa96a4c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c90f48ad.css",
-    "static/js/main.c5f9815b.js"
+    "static/css/main.2ff9a739.css",
+    "static/js/main.f613f513.js"
   ]
 }
