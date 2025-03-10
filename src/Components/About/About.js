@@ -19,14 +19,14 @@ function About(){
     <div className="flex w-full justify-center items-center"></div>
     <div className="flex flex-col lg:flex-row font-Karla justify-center">
         <div className="flex flex-col text-left m:2 lg:m-4">
-            <p className="border-b-2 border-slate-900 w-60 lg:w-80 py-2 font-bold text-xs lg:text-md">Birthday: <span className="font-normal"> 14, July 2005</span></p>
-            <p className="border-b-2 border-slate-900 w-60 lg:w-80 py-2 font-bold text-xs lg:text-md">Email: <span className="font-normal"> premsharma786zx@gmail.com</span></p>
-            <p className="border-b-2 border-slate-900 w-60 lg:w-80 py-2 font-bold text-xs lg:text-md">Phone: <span className="font-normal"> +91 9879959544</span></p>
+            <p className="border-b-2 border-slate-900 w-60 lg:w-80 py-2 font-bold text-xs lg:text-base">Birthday: <span className="font-normal"> 14, July 2005</span></p>
+            <p className="border-b-2 border-slate-900 w-60 lg:w-80 py-2 font-bold text-xs lg:text-base">Email: <span className="font-normal"> premsharma786zx@gmail.com</span></p>
+            <p className="border-b-2 border-slate-900 w-60 lg:w-80 py-2 font-bold text-xs lg:text-base">Phone: <span className="font-normal"> +91 9879959544</span></p>
         </div>
         <div className="flex flex-col text-left m:2 lg:m-4">
-            <p className="border-b-2 border-slate-900 w-60 lg:w-80 py-2 font-bold text-xs lg:text-md">Age: <span className="font-normal"> 19</span></p>
-            <p className="border-b-2 border-slate-900 w-60 lg:w-80 py-2 font-bold text-xs lg:text-md">Degree:<span className="font-normal"> Pursuing BCA</span></p>
-            <p className="border-b-2 border-slate-900 w-60 lg:w-80 py-2 font-bold text-xs lg:text-md">City:<span className="font-normal"> Ahmedabad</span></p>
+            <p className="border-b-2 border-slate-900 w-60 lg:w-80 py-2 font-bold text-xs lg:text-base">Age: <span className="font-normal"> 19</span></p>
+            <p className="border-b-2 border-slate-900 w-60 lg:w-80 py-2 font-bold text-xs lg:text-base">Degree:<span className="font-normal"> Pursuing BCA</span></p>
+            <p className="border-b-2 border-slate-900 w-60 lg:w-80 py-2 font-bold text-xs lg:text-base">City:<span className="font-normal"> Ahmedabad</span></p>
         </div>
     </div>
     <div className="mt-7">
@@ -102,4 +102,4 @@ function About(){
 )
 }
 
-export default About;   
+export default About;

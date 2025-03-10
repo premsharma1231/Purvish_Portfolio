@@ -42,26 +42,33 @@ function LetsTalk() {
   };
 
   return (
-    <div className='flex mt-10 mb-10 justify-center'>
-      <div className='w-8/12 p-8 rounded-lg shadow-lg'>
-        <h2 className='text-2xl font-bold text-center font-kanit text-black'>SEND ME AN EMAIL</h2>
-        <p className='text-gray-400 text-center mb-6'>We are very responsive to messages!!</p>
+    <div className='flex justify-center mt-10 mb-10 px-4'>
+      <div className='w-full max-w-2xl p-8 rounded-lg shadow-lg bg-transparent'>
+        <h2 className='text-2xl sm:text-3xl font-bold text-center font-Karla text-black'>SEND ME AN EMAIL</h2>
+        <p className='text-gray-400 text-center mb-6 text-sm sm:text-base'>We are very responsive to messages!!</p>
         <form onSubmit={sendEmail} className='space-y-6'>
           <div>
-            <label className='flex items-center text-black'><FaUser className='mr-2'/> Name:</label>
-            <input type='text' name='name' value={formData.name} onChange={handleInputChange} required className='w-full p-3 border-2 border-gray-300 rounded' placeholder='Your Name' />
+            <label className='flex items-center text-black text-sm sm:text-base'><FaUser className='mr-2'/> Name:</label>
+            <input type='text' name='name' value={formData.name} onChange={handleInputChange} required 
+              className='w-full p-3 border-2 border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400' 
+              placeholder='Your Name' />
           </div>
           <div>
-            <label className='flex items-center text-black'><FaEnvelope className='mr-2'/> Email:</label>
-            <input type='email' name='email' value={formData.email} onChange={handleInputChange} required className='w-full p-3 border-2 border-gray-300 rounded' placeholder='Your Email' />
+            <label className='flex items-center text-black text-sm sm:text-base'><FaEnvelope className='mr-2'/> Email:</label>
+            <input type='email' name='email' value={formData.email} onChange={handleInputChange} required 
+              className='w-full p-3 border-2 border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400' 
+              placeholder='Your Email' />
           </div>
           <div>
-            <label className='flex items-center text-black'><FaCommentDots className='mr-2'/> Message:</label>
-            <textarea name='feedback' value={formData.feedback} onChange={handleInputChange} required className='w-full p-3 border-2 border-gray-300 rounded' rows='4' placeholder='Your Feedback'></textarea>
+            <label className='flex items-center text-black text-sm sm:text-base'><FaCommentDots className='mr-2'/> Message:</label>
+            <textarea name='feedback' value={formData.feedback} onChange={handleInputChange} required 
+              className='w-full p-3 border-2 border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400' 
+              rows='4' placeholder='Your Feedback'></textarea>
           </div>
           <div>
-            <label className='text-black'>Rating:</label>
-            <select name='rating' value={formData.rating} onChange={handleInputChange} required className='ml-2 border-2 border-gray-300 rounded p-2'>
+            <label className='text-black text-sm sm:text-base'>Rating:</label>
+            <select name='rating' value={formData.rating} onChange={handleInputChange} required 
+              className='ml-2 border-2 border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-400'>
               <option value=''>Choose...</option>
               <option value='1'>1 ⭐</option>
               <option value='2'>2 ⭐⭐</option>
@@ -70,11 +77,12 @@ function LetsTalk() {
               <option value='5'>5 ⭐⭐⭐⭐⭐</option>
             </select>
           </div>
-          <div className='flex justify-between'>
-            <button type='submit' className='bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded flex items-center'>
+          <div className='flex flex-col sm:flex-row justify-between gap-4'>
+            <button type='submit' className='w-full sm:w-auto bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded flex items-center justify-center'>
               <FaPaperPlane className='mr-2' /> Submit
             </button>
-            <button type='button' onClick={() => setFormData({ name: '', email: '', feedback: '', rating: '' })} className='bg-gray-300 hover:bg-gray-400 text-black font-bold py-2 px-4 rounded flex items-center'>
+            <button type='button' onClick={() => setFormData({ name: '', email: '', feedback: '', rating: '' })} 
+              className='w-full sm:w-auto bg-gray-300 hover:bg-gray-400 text-black font-bold py-2 px-4 rounded flex items-center justify-center'>
               <FaRedo className='mr-2' /> Reset
             </button>
           </div>

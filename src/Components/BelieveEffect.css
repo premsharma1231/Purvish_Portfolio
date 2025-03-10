@@ -1,0 +1,40 @@
+h2 {
+  position: relative;
+  font-size: 6em;
+  text-transform: uppercase;
+}
+
+h2 span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+.clip-top {
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+  overflow: hidden;
+}
+
+h2:hover .clip-top {
+  transform: translateY(-18px);
+}
+
+.clip-bottom {
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+  overflow: hidden;
+}
+
+h2:hover .clip-bottom {
+  transform: translateY(18px);
+}
+
+.hidden-text {
+  top: 50%;
+  transform: translateY(-50%) scaleY(0);
+  padding-left: 20px;
+}
+
+h2:hover .hidden-text {
+  transform: translateY(-50%) scaleY(1);
+}

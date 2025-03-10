@@ -54,7 +54,7 @@ function Platforms(){
   <Tooltip className="text-xl" title="Mail" slots={{transition: Zoom}} arrow placement="right">
   <a href="mailto:premsharma786zx@gmail.com" 
   target="_blank" 
-  rel="noopener noreferrer"><FontAwesomeIcon 
+  rel="noopener noreferrer"><FontAwesomeIcon
     className="w-8 h-8 text-black  hover:text-gray-700 rounded-full transition-all p-2 "
     icon={faEnvelope} 
     bounce

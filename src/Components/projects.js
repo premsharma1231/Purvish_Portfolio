@@ -109,7 +109,7 @@ function Projects() {
         />
       ))}
     </div>
-    <Platforms />
+    {/* <Platforms /> */}
     <FooterForAll />
     </div>
     </>
