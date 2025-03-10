@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "./button";
+import Button from "./Button";
 import "@fontsource/rubik-vinyl"; 
 import "@fontsource/karla";
 import "../App.css";

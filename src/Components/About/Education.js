@@ -7,7 +7,7 @@ import React from "react";
 function Education(){
   return(
     <>
-    <div className="flex m-auto flex-col justify-start items-center w-full pb-14
+    <div className="flex m-auto flex-col justify-start items-center w-full pb-14 mt-8
     sm:flex-row
     md:flex-row
     lg:mt-20 lg:w-11/12 lg:flex-row lg:items-start">

@@ -101,7 +101,7 @@
             </Link>
           </li> 
           <div className="flex justify-between items-center">
-            <span className="mx-2 bg-transparent lg:bg-DarkColor rounded-full p-0">
+            <span className="mx-2 bg-transparent bg-DarkColor rounded-full p-0">
               <Hamburger color="white" className="p-0" toggled={isToggled} onToggle={handleToggle} />
             </span>
             <Switch onClick={toggleMode} className="mx-2"/>

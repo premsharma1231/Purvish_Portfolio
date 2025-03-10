@@ -25,7 +25,7 @@ const Content = () => {
 
     return (
         <>
-                <div id="typewriter" className="flex flex-col mt-24 justify-center items-center text-center">
+                <div id="typewriter" className="flex flex-col mt-12 lg:mt-24 justify-center items-center text-center">
                     <span className="font-Teko font-extrabold text-3xl heyiam lg:text-6xl">HEY I AM <span id="meraname" className="underline">Purvish Sharma</span></span>
                     <span className="font-Teko font-extrabold text-2xl lg:text-6xl">BUT YOU CAN CALL ME <span id="premname" className="underline">Prem</span></span>
                 <span className="w-2/3 m-auto text-xl font-bold mt-4 lg:text-2xl mb-4">I am a <span id="description" className="font-Karla text-yellow-500 font-bold bg-black"></span></span>

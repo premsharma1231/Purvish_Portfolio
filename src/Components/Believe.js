@@ -3,8 +3,8 @@ import "./BelieveEffect.css"; // Import external CSS file for styling
 
 const BelieveEffect = () => {
   return (
-    <div className="flex justify-center items-center h-28">
-      <h2 className="relative text-6xl uppercase text-transparent">
+    <div className="flex justify-center items-center mt-3">
+      <h2 className="relative text-3xl lg:text-6xl uppercase text-transparent">
         Go Hard
         <span className="absolute top-0 left-0 text-black transition-transform duration-500 clip-top">
         Go Hard

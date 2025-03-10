@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import Button from "../button";
+import Button from "../Button";
 import { faBootstrap, faCss, faHtml5, faJs, faReact } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Education from './Education';
