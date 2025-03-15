@@ -90,7 +90,7 @@ function About(){
         </span>
     </div>
     <div className="flex flex-col justify-center items-center mt-16">
-        <span className="font-Bungee text-xl lg:text-2xl underline">Github Streak Statistics</span>
+        <span className="font-Bungee text-lg lg:text-2xl underline">Github Streak Statistics</span>
         <img className="mt-5 w-64 lg:w-3/4" src="https://streak-stats.demolab.com/?user=premsharma1231" alt="Unable to Fetch Image" />
     </div>
     </div>

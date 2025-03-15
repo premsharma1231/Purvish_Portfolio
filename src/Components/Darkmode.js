@@ -66,7 +66,7 @@ export default function CustomizedSwitches() {
   return (
     <FormGroup>
       <FormControlLabel
-        control={<MaterialUISwitch sx={{ m: 1 }}/>}
+        control={<MaterialUISwitch sx={{ ml: 1 }}/>}
         label="" className="hover:cursor-none"
       />
     </FormGroup>

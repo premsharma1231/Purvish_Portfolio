@@ -11,7 +11,7 @@ function Projectcard({title, description, GithubUrl, LiveUrl, urlToImage, langua
   document.body.style.overflowX = "hidden";
   return (
     <>
-    <Tilt className="card flex flex-col justify-center items-center w-72 lg:w-5/12 h-full p-2 bg-gray-300 text-center font-Karla border-none shadow" perspective={2000} glareEnable={true} tiltMaxAngleX={5} tiltMaxAngleY={5} glareMaxOpacity={0}>
+    <Tilt className="card flex flex-col justify-center items-center w-full lg:w-5/12 h-full p-2 bg-gray-300 text-center font-Karla border-none shadow" perspective={2000} glareEnable={true} tiltMaxAngleX={5} tiltMaxAngleY={5} glareMaxOpacity={0}>
     <div className="flex flex-col">
       <img src={urlToImage} className="card-img-top w-full" alt={title} />
       <div className="card-body flex flex-col items-center justify-evenly"> 

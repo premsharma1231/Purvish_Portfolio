@@ -90,7 +90,7 @@
 
     return (
       <>
-        <div className={`${bgColor} bg-opacity-30 transition-all z-50 sticky top-0 flex justify-between items-center px-2 py-4 lg:px-4 lg:pl-5`}>
+        <div className={`${bgColor} bg-opacity-30 transition-all z-50 sticky top-0 flex justify-between items-center pl-2 py-4 lg:px-4 lg:pl-5`}>
           <li className="text-2xl ml-2 hover:scale-105 transition-all list-none
           sm:text-3xl sm:ml-4
           md:text-4xl md:ml-5
@@ -101,10 +101,10 @@
             </Link>
           </li> 
           <div className="flex justify-between items-center">
-            <span className="mx-2 bg-transparent bg-DarkColor rounded-full p-0">
-              <Hamburger color="white" className="p-0" toggled={isToggled} onToggle={handleToggle} />
+            <span className="mx-2 lg:bg-white rounded-full p-0">
+              <Hamburger color="black" size={30} className="p-0 text-sm" toggled={isToggled} onToggle={handleToggle} />
             </span>
-            <Switch onClick={toggleMode} className="mx-2"/>
+            <Switch onClick={toggleMode} className=""/>
           </div>
           <div ref={navRef} className={`absolute top-28 right-1 transition-all text-center flex-col font-bold z-10`}>
             {navBarContentMiddle.map((item, index) => (
