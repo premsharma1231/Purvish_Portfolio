@@ -30,7 +30,7 @@ function About(){
         </div>
     </div>
     <div className="mt-7">
-    <Button as="a" href='http://localhost:3001/Purvish_Portfolio/LetsTalk' filled rel="noopener noreferrer">
+    <Button as="a" href='https://premsharma1231.github.io/Purvish_Portfolio/LetsTalk' filled rel="noopener noreferrer">
         Let's Work Together?
     </Button>
     </div>

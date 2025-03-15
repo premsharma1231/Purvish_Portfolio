@@ -90,7 +90,7 @@
 
     return (
       <>
-        <div className={`${bgColor} bg-opacity-30 transition-all z-50 sticky top-0 flex justify-between items-center pl-2 py-4 lg:px-4 lg:pl-5`}>
+        <div className={`${bgColor} bg-opacity-30 transition-all z-50 sticky top-0 flex justify-between items-center pl-4 py-4 lg:px-4 lg:pl-5`}>
           <li className="text-2xl ml-2 hover:scale-105 transition-all list-none
           sm:text-3xl sm:ml-4
           md:text-4xl md:ml-5
