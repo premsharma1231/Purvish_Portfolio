@@ -3,9 +3,26 @@ import React, { useState, useEffect } from "react";
 const Cursor = () => {
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const [isClicked, setIsClicked] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+
+    // Detect screen size
+    useEffect(() => {
+        const checkScreenSize = () => {
+            setIsMobile(window.innerWidth <= 768); // 768px se chhoti screen pe disable
+        };
+
+        checkScreenSize();
+        window.addEventListener("resize", checkScreenSize);
+
+        return () => {
+            window.removeEventListener("resize", checkScreenSize);
+        };
+    }, []);
 
     // Mousemove event listener
     useEffect(() => {
+        if (isMobile) return;
+
         const updatePosition = (e) => {
             setPosition({ x: e.clientX, y: e.clientY });
         };
@@ -15,10 +32,12 @@ const Cursor = () => {
         return () => {
             window.removeEventListener("mousemove", updatePosition);
         };
-    }, []);
+    }, [isMobile]);
 
     // Click event listener
     useEffect(() => {
+        if (isMobile) return;
+
         const handleClick = () => {
             setIsClicked(true);
             setTimeout(() => setIsClicked(false), 100);
@@ -29,7 +48,10 @@ const Cursor = () => {
         return () => {
             window.removeEventListener("click", handleClick);
         };
-    }, []);
+    }, [isMobile]);
+
+    // Agar mobile hai toh cursor render mat karo
+    if (isMobile) return null;
 
     return (
         <>
@@ -44,9 +66,7 @@ const Cursor = () => {
 
             {/* Inner Cursor with Click Effect */}
             <div
-                className={`fixed w-2 h-2 p-4 ${
-                    isClicked ? "p-5" : "p-4"
-                } z-50 border-none opacity-65 bg-yellow-500 rounded-full pointer-events-none transition-all duration-200 ease-out`}
+                className={`fixed w-2 h-2 p-4 ${isClicked ? "p-5" : "p-4"} z-50 border-none opacity-65 bg-yellow-500 rounded-full pointer-events-none transition-all duration-75 ease-out`}
                 style={{
                     left: `${position.x - (isClicked ? 20 : 17)}px`,
                     top: `${position.y - (isClicked ? 20 : 16)}px`

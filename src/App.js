@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from "react";
 import './App.css';
 import './index.css';
 import Navbar from './Components/Navbar';
@@ -11,6 +11,7 @@ import Projects from './Components/Project';
 import LetsTalk from './Components/LetsTalk';
 import {BrowserRouter as Router, Route, Routes, useLocation} from "react-router-dom";
 import { AnimatePresence, motion } from 'framer-motion';
+import { WebModeProvider } from "./Components/WebModeContext";
 // import FooterForAll from './Components/FooterForAll';
 
 function AnimatedRoutes() {
@@ -97,17 +98,18 @@ function AnimatedRoutes() {
 
 function App() {
   document.body.style.overflowX = "none"
-  const storedWebMode = localStorage.getItem("WebMode");
-  document.body.style.backgroundColor = storedWebMode === "Light" ? "#042743" : "#ECDFCC";
-  // document.body.style.overflow = 'hidden';
+  // const [webMode, setWebMode] = useState(() => localStorage.getItem("webMode") || "Light");
+  // document.body.style.backgroundColor = webMode === "Light" ? "#ECDFCC" : "#042743";
   return (
     <>
-    <Router>
-    <Navbar />
-    <Platforms />
-    <Cursor />
-    <AnimatedRoutes />
-    </Router>
+    <WebModeProvider>
+        <Router>
+        <Navbar />
+        <Platforms />
+        <Cursor />
+        <AnimatedRoutes />
+        </Router>
+    </WebModeProvider>
     </>
   );
 }

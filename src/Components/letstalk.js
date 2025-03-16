@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState, useContext } from "react";
 import { FaPaperPlane, FaRedo, FaUser, FaEnvelope, FaCommentDots, FaStar } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
+import { WebModeContext } from "./WebModeContext"; // ✅ Import Context
+
 
 function LetsTalk() {
+  const { webMode, toggleMode } = useContext(WebModeContext); // ✅ Use WebModeContext
   document.body.style.overflowX = "hidden";
   document.body.style.overflowY = "scroll";
 
@@ -43,7 +46,7 @@ function LetsTalk() {
 
   return (
     <div className='flex justify-center mt-10 mb-10 px-4'>
-      <div className='w-full max-w-2xl p-8 rounded-lg shadow-lg bg-transparent'>
+      <div className={`w-full max-w-2xl p-8 rounded-lg shadow-lg  ${webMode === "Light" ? "bg-transparent" : "bg-DarkModeBg"}`}>
         <h2 className='text-2xl sm:text-3xl font-bold text-center font-Karla text-black'>SEND ME AN EMAIL</h2>
         <p className='text-gray-400 text-center mb-6 text-sm sm:text-base'>We are very responsive to messages!!</p>
         <form onSubmit={sendEmail} className='space-y-6'>
