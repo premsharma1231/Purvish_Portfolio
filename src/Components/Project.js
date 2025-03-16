@@ -9,7 +9,7 @@ function Projects() {
   document.body.style.overflowY = "scroll";
   localStorage.getItem("WebMode");
 
-  const Objects = [
+  const projects = [  
     {
       author: "Purvish Sharma",
       title: "Monkey Currency Calculator",
@@ -96,21 +96,12 @@ function Projects() {
   return (
     <>
     <div className="flex flex-col items-center">
-    <div className="mt-12 lg:mt-16 ml-0 pb-20 lg:px-8 px-0 flex flex-col flex-wrap justify-center gap-8 lg:flex-wrap lg:flex-row lg:ml-20 ">
-      {Objects.map((project, index) => (
-        <Projectcard
-          key={index}
-          title={project.title}
-          description={project.description}
-          languageUsed={project.languageUsed}
-          GithubUrl={project.GithubUrl}
-          LiveUrl={project.LiveUrl}
-          urlToImage={project.urlToImage}
-        />
-      ))}
-    </div>
-    {/* <Platforms /> */}
-    <FooterForAll />
+      <div className="mt-12 lg:mt-16 pb-20 lg:px-8 px-0 flex flex-col flex-wrap justify-center gap-8 lg:flex-row lg:ml-20">
+        {projects.map((project, index) => (
+          <Projectcard key={index} {...project} />
+        ))}
+      </div>
+      <FooterForAll />
     </div>
     </>
   );

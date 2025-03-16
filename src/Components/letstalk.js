@@ -1,15 +1,15 @@
-import React, { useEffect, useRef, useState, useContext } from "react";
+import React, { useState, useContext } from "react";
 import { FaPaperPlane, FaRedo, FaUser, FaEnvelope, FaCommentDots, FaStar } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
 import { WebModeContext } from "./WebModeContext"; // ✅ Import Context
 
-
 function LetsTalk() {
-  const { webMode, toggleMode } = useContext(WebModeContext); // ✅ Use WebModeContext
-  document.body.style.overflowX = "hidden";
-  document.body.style.overflowY = "scroll";
+  const { webMode } = useContext(WebModeContext); // ✅ Use WebModeContext
+
+  document.body.style.overflow = "hidden auto";
 
   const [formData, setFormData] = useState({ name: '', email: '', feedback: '', rating: '' });
+  const [loading, setLoading] = useState(false); // ✅ Loading state
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -19,11 +19,12 @@ function LetsTalk() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    // Validation
     if (!formData.name || !formData.email || !formData.feedback || !formData.rating) {
       alert("Please fill in all fields before submitting.");
       return;
     }
+
+    setLoading(true); // ✅ Start loading
 
     const emailParams = {
       user_name: formData.name,
@@ -34,22 +35,31 @@ function LetsTalk() {
     };
 
     emailjs.send('service_z7r4rtd', 'template_wfwfwsi', emailParams, 'EHOESy6pHMf-5STpw')
-      .then((response) => {
+      .then(() => {
         alert("Message Sent Successfully!");
         setFormData({ name: '', email: '', feedback: '', rating: '' });
       })
       .catch((error) => {
         console.error("EmailJS Error:", error);
         alert(`Failed to send message: ${error.text || "Please try again later."}`);
-      });
+      })
+      .finally(() => setLoading(false)); // ✅ Stop loading
   };
 
   return (
     <div className='flex justify-center mt-10 mb-10 px-4'>
-      <div className={`w-full max-w-2xl p-8 rounded-lg shadow-lg  ${webMode === "Light" ? "bg-transparent" : "bg-DarkModeBg"}`}>
+      <div className={`w-full max-w-2xl p-8 rounded-lg shadow-lg ${webMode === "Light" ? "bg-transparent" : "bg-DarkModeBg"}`}>
         <h2 className='text-2xl sm:text-3xl font-bold text-center font-Karla text-black'>SEND ME AN EMAIL</h2>
         <p className='text-gray-400 text-center mb-6 text-sm sm:text-base'>We are very responsive to messages!!</p>
-        <form onSubmit={sendEmail} className='space-y-6'>
+        
+        {/* ✅ Loading Bar */}
+        {loading && (
+          <div className="w-full bg-gray-300 h-2 rounded overflow-hidden">
+            <div className="bg-blue-500 h-full animate-pulse"></div>
+          </div>
+        )}
+
+        <form onSubmit={sendEmail} className='space-y-6 mt-4'>
           <div>
             <label className='flex items-center text-black text-sm sm:text-base'><FaUser className='mr-2'/> Name:</label>
             <input type='text' name='name' value={formData.name} onChange={handleInputChange} required 
@@ -81,8 +91,8 @@ function LetsTalk() {
             </select>
           </div>
           <div className='flex flex-col sm:flex-row justify-between gap-4'>
-            <button type='submit' className='w-full sm:w-auto bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded flex items-center justify-center'>
-              <FaPaperPlane className='mr-2' /> Submit
+            <button type='submit' disabled={loading} className={`w-full sm:w-auto bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded flex items-center justify-center ${loading ? "opacity-50 cursor-not-allowed" : ""}`}>
+              {loading ? "Sending..." : <> <FaPaperPlane className='mr-2' /> Submit</>}
             </button>
             <button type='button' onClick={() => setFormData({ name: '', email: '', feedback: '', rating: '' })} 
               className='w-full sm:w-auto bg-gray-300 hover:bg-gray-400 text-black font-bold py-2 px-4 rounded flex items-center justify-center'>
