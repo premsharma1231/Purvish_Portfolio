@@ -1,15 +1,15 @@
 import React, { useState, useContext } from "react";
 import { FaPaperPlane, FaRedo, FaUser, FaEnvelope, FaCommentDots, FaStar } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
-import { WebModeContext } from "./WebModeContext"; // ✅ Import Context
+import { WebModeContext } from "./WebModeContext";
+import Swal from "sweetalert2"; // ✅ Import SweetAlert2
 
 function LetsTalk() {
-  const { webMode } = useContext(WebModeContext); // ✅ Use WebModeContext
-
+  const { webMode } = useContext(WebModeContext);
   document.body.style.overflow = "hidden auto";
 
   const [formData, setFormData] = useState({ name: '', email: '', feedback: '', rating: '' });
-  const [loading, setLoading] = useState(false); // ✅ Loading state
+  const [loading, setLoading] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -20,30 +20,45 @@ function LetsTalk() {
     e.preventDefault();
 
     if (!formData.name || !formData.email || !formData.feedback || !formData.rating) {
-      alert("Please fill in all fields before submitting.");
+      Swal.fire({
+        icon: "warning",
+        title: "Oops...",
+        text: "Please fill in all fields before submitting!",
+        confirmButtonColor: "#3085d6",
+      });
       return;
     }
 
-    setLoading(true); // ✅ Start loading
+    setLoading(true);
 
     const emailParams = {
       user_name: formData.name,
       user_email: formData.email,
       message: formData.feedback,
       rating: formData.rating,
-      to_name: "Purvish Sharma", // Change dynamically if needed
+      to_name: "Purvish Sharma",
     };
 
     emailjs.send('service_z7r4rtd', 'template_wfwfwsi', emailParams, 'EHOESy6pHMf-5STpw')
       .then(() => {
-        alert("Message Sent Successfully!");
+        Swal.fire({
+          icon: "success",
+          title: "Message Sent Successfully!",
+          text: "I'll get back to you soon 😊",
+          showConfirmButton: false,
+          timer: 3000,
+        });
         setFormData({ name: '', email: '', feedback: '', rating: '' });
       })
       .catch((error) => {
-        console.error("EmailJS Error:", error);
-        alert(`Failed to send message: ${error.text || "Please try again later."}`);
+        Swal.fire({
+          icon: "error",
+          title: "Failed to Send 😢",
+          text: error.text || "Please try again later.",
+          confirmButtonColor: "#d33",
+        });
       })
-      .finally(() => setLoading(false)); // ✅ Stop loading
+      .finally(() => setLoading(false));
   };
 
   return (
@@ -52,7 +67,6 @@ function LetsTalk() {
         <h2 className='text-2xl sm:text-3xl font-bold text-center font-Karla text-black'>SEND ME AN EMAIL</h2>
         <p className='text-gray-400 text-center mb-6 text-sm sm:text-base'>We are very responsive to messages!!</p>
         
-        {/* ✅ Loading Bar */}
         {loading && (
           <div className="w-full bg-gray-300 h-2 rounded overflow-hidden">
             <div className="bg-blue-500 h-full animate-pulse"></div>
