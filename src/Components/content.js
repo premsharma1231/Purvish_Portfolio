@@ -17,7 +17,7 @@ const Content = () => {
 
     useEffect(() => {
         new Typewriter('#description', {
-            strings: ["Front-end Web Developer.", "Trainer at KPO/BPO Company.", "Also a freeLancer.","full time Quality Analyst.", "Auditor."],
+            strings: ["Front-end Web Developer.", "Trainer at KPO/BPO Company.", "freeLancer also.","full time Quality Analyst.", "Auditor."],
             autoStart: true,
             loop:true,
             cursor: '|',

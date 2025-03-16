@@ -17,10 +17,11 @@ function Platforms(){
     return(
         <>
         {/* hover:left-7 hover:w-9 hover:h-9 */}
-        <div className={`overflow-x-hidden ml-0 flex flex-row w-full justify-between items-center px-2 py-2 mt-3 mb-5 ${webMode === "Light" ? "bg-gray-200" : "bg-gray-700"} 
-        sm:flex sm:flex-row sm:fixed sm:bottom-5 sm:w-12 sm:ml-5 sm:px-0
-        md:flex md:flex-col md:fixed md:bottom-9 md:w-12 md:ml-5 md:px-0
-        lg:flex lg:flex-col lg:fixed lg:bottom-14 lg:w-12 lg:ml-5 lg:px-0 lg:mt-0
+        <div className={`overflow-x-hidden ml-0 flex w-full justify-between items-center px-2 py-2 mt-3 mb-5 
+        ${webMode === "Light" ? "bg-gray-200" : "bg-gray-700"} 
+        sm:fixed sm:bottom-5 sm:w-12 sm:ml-5 sm:px-0 sm:flex-row
+        md:bottom-9 md:flex-col
+        lg:bottom-14 lg:mt-0 lg:rounded-full
         `}>
         
         {/* <span className="absolute top-0 h-28 w-2 z-10 bg-gray-900 rounded-b"></span> */}
