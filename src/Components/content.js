@@ -19,9 +19,10 @@ const Content = () => {
             strings: [
                 "Front-end Web Developer.", 
                 "Trainer at KPO/BPO Company.", 
-                "Freelancer also.",
+                "Freelancer.",
                 "Full-time Quality Analyst.", 
-                "Auditor."
+                "Auditor.",
+                "Process Associate at AWS."
             ],
             autoStart: true,
             loop: true,
@@ -42,9 +43,9 @@ const Content = () => {
                 BUT YOU CAN CALL ME <span id="premname" className="underline">Prem</span>
             </span>
             <span className="w-full lg:w-2/3 m-auto text-md font-bold mt-4 lg:text-2xl mb-4">
-                I am a <span id="description" className="font-Karla text-yellow-500 font-bold bg-black"></span>
+                I am a <span id="description" className="font-Karla text-black-500 font-bold "></span>
             </span>
-            <BelieveEffect />
+            {/* <BelieveEffect /> */}
         </div>
     );
 };

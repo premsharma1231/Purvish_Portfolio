@@ -59,9 +59,9 @@ function Navbar() {
       x: isToggled ? 0 : 10,
       opacity: isToggled ? 1 : 0,
       visibility: isToggled ? "visible" : "hidden",
-      duration: 0.3,
+      duration: 0.1,
       ease: isToggled ? "bounce.out" : "power3.in",
-      stagger: 0.05,
+      stagger: 0.061,
     });
   }, [isToggled]);
 
@@ -74,10 +74,10 @@ function Navbar() {
       </li>
       
       <div className="flex justify-between items-center">
-        <span className="mx-2 lg:bg-white rounded-full p-0">
+        <span className={`mx-2 ${webMode === "Light" ? "lg:bg-white" : "lg:bg-gray-300"} rounded-full p-0`}>
           <Hamburger color="black" size={30} toggled={isToggled} onToggle={setIsToggled} />
         </span>
-        <CustomizedSwitches />
+        <CustomizedSwitches/>
       </div>
       
       <div className="absolute top-28 right-1 transition-all text-center flex-col font-bold z-10">
