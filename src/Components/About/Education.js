@@ -2,25 +2,39 @@ import React from "react";
 
 const educationData = [
   {
+    year: "Seeking Admission",
+    degree: "MSc in Artificial Intelligence and Data Science",
+    institute: "London or Italy Public University",
+    result: "Got eight offer letters from London Universities.",
+    note: "- Due to financial constraints, I am currently seeking admission for MSc in AI and Data Science in public universities in Italy. Below are the offer letters I have received so far from London.",
+    certificate:
+      "https://drive.google.com/file/d/18hu2S_LEpKj9I_e-gthf-qoPoLewUPLF/view?usp=sharing",
+    cerfiticatename: "Offer Letter"
+  },
+  {
     year: "2022 - 2025",
     degree: "Bachelor of Computer Application",
     institute: "Pacific University, Udaipur",
     result: "8.2 CGPA",
-    note: "Secured top 3 rank in BCA Semester 6."
+    note: "- Secured top 3 rank in BCA Semester 6.",
+    certificate:"https://drive.google.com/file/d/1lhunNtWVk_DhvU9mIPfTToZpcFafC0yA/view?usp=sharing",
+    cerfiticatename: "Transcript"
   },
   {
     year: "2021 - 2022",
     degree: "Higher Secondary Education (12th Commerce)",
     institute: "Caravan English Medium School, Ahmedabad",
     result: "83.76% (94.12 Percentile)",
-    note: "Secured 3rd rank in school."
+    note: "- Secured 3rd rank in school. Achieved 97% in Accounts and 92% in Organisation of Commerce.",
+    certificate:"https://drive.google.com/file/d/1AW2tf3TLcB3sU-00umS3lAJ38kFCrhTs/view?usp=sharing",
+    cerfiticatename: "Board Result"
   },
   {
     year: "2020 - 2021",
     degree: "Secondary Education (10th)",
     institute: "Caravan English Medium School, Ahmedabad",
     result: "42% (48.12 Percentile)",
-    note: ""
+    note: "- I was not able to score well in 10th due to my health issues. I was suffering from a severe case of chickenpox during my board exams."
   }
 ];
 
@@ -31,6 +45,7 @@ const experienceData = [
     company: "AndWeSupport (AWS)",
     field: "Promo Industry",
     note: "- At AWS, I support sales operations and manage USA-based client requests using tools like Promo XCRM, Sage, and EPS. This role has strengthened my skills in client handling, sales coordination, and software-driven workflow management."
+
   },
   {
     year: "1st Jan 2024 - 17th Jul 2025",
@@ -39,7 +54,8 @@ const experienceData = [
     field: "KPO/BPO",
     note: "- I have 18 months of experience at Arcgate, where I started at age 18 and quickly advanced into a Trainer role. I trained multiple new joiners many 5–7 years older than me, showcasing my quick learning, leadership, and strong communication skills.",
     certificate:
-      "https://drive.google.com/file/d/1KYeflcdtoPtQ7aRdma1YYVO01V0KgXVL/view?usp=sharing"
+      "https://drive.google.com/file/d/1KYeflcdtoPtQ7aRdma1YYVO01V0KgXVL/view?usp=sharing",
+    cerfiticatename: "Experience Certificate"
   },
   {
     year: "Sept 2023 - Nov 2023",
@@ -79,9 +95,9 @@ const TimelineItem = ({ data }) => (
         href={data.certificate}
         target="_blank"
         rel="noreferrer"
-        className="bg-gray-400 py-1 px-2 rounded-md mt-2 inline-block text-xs lg:text-sm"
+        className="bg-gray-800 text-white py-1 px-2 rounded-md mt-2 inline-block text-xs lg:text-sm hover:rotate-2"
       >
-        Experience Certificate
+        {data.cerfiticatename}
       </a>
     )}
   </div>
@@ -89,10 +105,10 @@ const TimelineItem = ({ data }) => (
 
 const Education = () => {
   return (
-    <div className="flex flex-col w-full px-4 gap-4 py-10 lg:flex-row lg:px-12">
+    <div className="flex flex-col w-full px-4 gap-4 py-10 lg:flex-row lg:px-12 ml-5">
       
       {/* Education */}
-      <div className="bg-white rounded-md font-Karla p-6 flex-1 text-DarkColor relative border shadow-md">
+      <div className="bg-white rounded-md font-Karla p-6 flex-1 text-DarkColor relative shadow-md">
         <h1 className="font-Bungee text-2xl lg:text-4xl underline mb-10">Education</h1>
         {educationData.map((item, index) => (
           <TimelineItem key={index} data={item} />
@@ -100,7 +116,7 @@ const Education = () => {
       </div>
 
       {/* Experience */}
-      <div className="bg-gray-300 rounded-md font-Karla p-6 flex-1 text-black relative border shadow-md">
+      <div className="bg-gray-300 rounded-md font-Karla p-6 flex-1 text-black relative shadow-md">
         <h1 className="font-Bungee text-2xl lg:text-4xl underline mb-10">Experience</h1>
         {experienceData.map((item, index) => (
           <TimelineItem key={index} data={item} />

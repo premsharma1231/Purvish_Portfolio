@@ -17,11 +17,12 @@ const Content = () => {
 
         const typewriter = new Typewriter('#description', {
             strings: [
-                "Front-end Web Developer.", 
-                "Trainer at KPO/BPO Company.", 
+                "Front-end Web Developer.",
+                "Trainer at KPO/BPO Company.",
                 "Freelancer.",
-                "Full-time Quality Analyst.", 
+                "Full-time Quality Analyst.",
                 "Auditor.",
+                "currently working in Promotional Industry.",
                 "Process Associate at AWS."
             ],
             autoStart: true,

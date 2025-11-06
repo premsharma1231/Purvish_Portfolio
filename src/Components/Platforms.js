@@ -13,7 +13,7 @@ function Platforms() {
 
   const socialLinks = [
     { href: "https://github.com/premsharma1231", title: "Github", icon: faGithub },
-    { href: "https://www.linkedin.com/in/sharma-purvish-591120248/", title: "LinkedIn", icon: faLinkedin },
+    { href: "https://www.linkedin.com/in/sharma-purvish-haresh-591120248/", title: "LinkedIn", icon: faLinkedin },
     { href: "mailto:premsharma786zx@gmail.com", title: "Mail", icon: faEnvelope },
     { href: "https://www.instagram.com/premmsharmaaaa/", title: "Instagram", icon: faInstagram },
   ];
