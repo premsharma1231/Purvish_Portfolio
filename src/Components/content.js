@@ -40,7 +40,7 @@ const Content = () => {
             <span className="font-Teko font-extrabold text-2xl lg:text-6xl">
                 BUT YOU CAN CALL ME <span id="premname" className="underline">Prem</span>
             </span>
-            <span className="w-full lg:w-2/3 m-auto text-md font-bold mt-4 lg:text-2xl mb-4">
+            <span className="w-full lg:w-1/3 m-auto text-md font-bold mt-4 lg:text-2xl mb-4">
                 <span id="description" className="font-Karla text-black-500 font-bold "></span>
             </span>
             {/* <BelieveEffect /> */}

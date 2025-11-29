@@ -7,6 +7,8 @@ import Github from "./Githubcalendar";
 import FooterForAll from "../FooterForAll";
 import { WebModeContext } from "../WebModeContext"; // ✅ Import Context
 import { faFileExcel } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
+
 
 const skills = [
   { name: "HTML", level: 99 },
@@ -196,30 +198,37 @@ function About(){
         </div>
     </div>
     <div className="flex flex-col justify-center items-center  mt-7">
-    <Button as="a" href='https://premsharma1231.github.io/Purvish_Portfolio/LetsTalk' filled rel="noopener noreferrer">
+    <Link to="/Purvish_Portfolio/LetsTalk">
+    <Button target="blank" as="a" filled rel="noopener noreferrer">
         Let's Work Together?
     </Button>
+    </Link>
     <div className="flex flex-row mt-5 gap-5">
-      <Button as="a" href='https://drive.google.com/file/d/1Ltn0mcBs7iLcRrqYRuhFNcrkcCn9E1pU/view?usp=sharing' filled rel="noopener noreferrer">
+      <Button target="blank" as="a" href='https://drive.google.com/file/d/1Ltn0mcBs7iLcRrqYRuhFNcrkcCn9E1pU/view?usp=sharing' filled rel="noopener noreferrer">
           Download CV
       </Button>
-      <Button as="a" href='https://drive.google.com/file/d/1WiBNoT8L2wqiL-YLN1Pjn5mdoFSzXsDi/view?usp=sharing' filled rel="noopener noreferrer">
+      <Button target="blank" as="a" href='https://drive.google.com/file/d/1WiBNoT8L2wqiL-YLN1Pjn5mdoFSzXsDi/view?usp=sharing' filled rel="noopener noreferrer">
           Download EuroPass CV
       </Button>
     </div>
     <div className="flex flex-row mt-5 gap-40">
-      <Button as="a" href='https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_68b3f3a8457ff98b46588fa7_1757414410676_completion_certificate.pdf' filled rel="noopener noreferrer">
+      <Button target="blank" as="a" href='https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_68b3f3a8457ff98b46588fa7_1757414410676_completion_certificate.pdf' filled rel="noopener noreferrer">
           Data Analyst Certificate
       </Button>
-      <Button as="a" href='https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/E9pA6qsdbeyEkp3ti_9PBTqmSxAf6zZTseP_68b3f3a8457ff98b46588fa7_1758188133934_completion_certificate.pdf' filled rel="noopener noreferrer">
+      <Button target="blank" as="a" href='https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/E9pA6qsdbeyEkp3ti_9PBTqmSxAf6zZTseP_68b3f3a8457ff98b46588fa7_1758188133934_completion_certificate.pdf' filled rel="noopener noreferrer">
           Cyber Security Certificate
       </Button>
     </div>
-      <h1 as="a" className="mt-5 font-Karla font-bold text-lg text-[rgb(203,238,239)] bg-[rgb(13,13,13)] px-24 py-5 rounded-full 
-          transform transition duration-300 hover:scale-110 hover:bg-green-200 hover:border-black hover:text-black"
-          href='' filled rel="noopener noreferrer">
-          Download Quotation to hire me in Promotional Industry
-      </h1>
+      <a
+  className="mt-5 font-Karla font-bold text-lg text-[rgb(203,238,239)] bg-[rgb(13,13,13)] px-24 py-5 rounded-full 
+  transform transition duration-300 hover:scale-110 hover:bg-green-200 hover:border-black hover:text-black cursor-pointer inline-block"
+  href="https://drive.google.com/file/d/1LOnv0cSaL1MFsALaLIZQPiuSyRBTcxD9/view?usp=sharing"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Download Quotation to hire me in Promotional Industry
+</a>
+
     </div>
 
 

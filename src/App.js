@@ -12,6 +12,7 @@ import { BrowserRouter as Router, Route, Routes, useLocation } from "react-route
 import { AnimatePresence, motion } from "framer-motion";
 import { WebModeProvider } from "./Components/WebModeContext";
 
+
 function AnimatedRoutes() {
   const location = useLocation();
   const pageTransition = {

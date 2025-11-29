@@ -12,6 +12,40 @@
     cursor: none;
 }
 
+/* Global cursor hide */
+body {
+  cursor: none;
+}
+
+/* Disable default cursor for MUI Switch and its interactive elements */
+/* Disable cursor on all Material UI interactive components */
+.MuiButtonBase-root,
+.MuiSwitch-root,
+.MuiSwitch-thumb,
+.MuiSwitch-track,
+.MuiSwitch-switchBase,
+.MuiInputBase-root,
+.MuiSelect-select,
+.MuiFormControlLabel-root {
+  cursor: none !important;
+}
+
+.no-cursor,
+.no-cursor * {
+  cursor: none !important;
+}
+
+
+/* Kuch elements khud ka cursor set kar dete hain, unpe bhi none lagao */
+button,
+a,
+input,
+textarea,
+select {
+  cursor: none;
+}
+
+
 .github-calendar {
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;
@@ -27,6 +61,12 @@
     margin: 3px !important;
     transition: transform 0.2s ease-in-out;
   }
+  /* Hide cursor for the hamburger toggle */
+.hamburger-react,
+.hamburger-react * {
+  cursor: none !important;
+}
+
   
   /* Adding hover effect */
   .github-calendar .day:hover {
