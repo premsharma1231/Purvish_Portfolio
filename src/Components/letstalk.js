@@ -81,7 +81,7 @@ function LetsTalk() {
               placeholder='Your Name' />
           </div>
           <div>
-            <label className={`flex items-center ${webMode === "Light" ? "text-black" : "text-white"} text-sm sm:text-base`}><FaEnvelope className='mr-2'/> Email:</label>
+            <label className='{`flex items-center ${webMode === "Light" ? "text-black" : "text-white"} text-sm sm:text-base`}'><FaEnvelope className='mr-2'/> Email:</label>
             <input type='email' name='email' value={formData.email} onChange={handleInputChange} required 
               className='w-full p-3 border-2 border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400' 
               placeholder='Your Email' />
