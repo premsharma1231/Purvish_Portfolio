@@ -1,5 +1,5 @@
 import React from "react";
-import Projectcard from "./Projectcard";
+import Projectcard from "./projectcard";
 import FooterForAll from "./FooterForAll";
 // import Platforms from "./Platforms";
 // import Tilt from 'react-parallax-tilt';

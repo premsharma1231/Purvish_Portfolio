@@ -63,9 +63,9 @@ function LetsTalk() {
 
   return (
     <div className='flex justify-center mt-10 mb-10 px-4'>
-      <div className={`w-full max-w-2xl p-8 rounded-lg shadow-lg ${webMode === "Light" ? "bg-transparent" : "bg-DarkModeBg"}`}>
-        <h2 className='text-2xl sm:text-3xl font-bold text-center font-Karla text-black'>SEND ME AN EMAIL</h2>
-        <p className='text-gray-400 text-center mb-6 text-sm sm:text-base'>We are very responsive to messages!!</p>
+      <div className={`w-full max-w-2xl p-8 ${webMode === "Light" ? "bg-transparent" : "bg-DarkModeBg"}`}>
+        <h2 className={`text-2xl sm:text-3xl font-bold text-center font-Karla ${webMode === "Light" ? "text-black" : "text-white"}`}>SEND ME AN EMAIL</h2>
+        <p className='text-gray-400 text-center mb-6 text-sm sm:text-base'>I am very responsive to messages!</p>
         
         {loading && (
           <div className="w-full bg-gray-300 h-2 rounded overflow-hidden">
@@ -75,25 +75,25 @@ function LetsTalk() {
 
         <form onSubmit={sendEmail} className='space-y-6 mt-4'>
           <div>
-            <label className='flex items-center text-black text-sm sm:text-base'><FaUser className='mr-2'/> Name:</label>
+            <label className={`flex items-center ${webMode === "Light" ? "text-black" : "text-white"} text-sm sm:text-base`}><FaUser className='mr-2'/> Name:</label>
             <input type='text' name='name' value={formData.name} onChange={handleInputChange} required 
               className='w-full p-3 border-2 border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400' 
               placeholder='Your Name' />
           </div>
           <div>
-            <label className='flex items-center text-black text-sm sm:text-base'><FaEnvelope className='mr-2'/> Email:</label>
+            <label className={`flex items-center ${webMode === "Light" ? "text-black" : "text-white"} text-sm sm:text-base`}><FaEnvelope className='mr-2'/> Email:</label>
             <input type='email' name='email' value={formData.email} onChange={handleInputChange} required 
               className='w-full p-3 border-2 border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400' 
               placeholder='Your Email' />
           </div>
           <div>
-            <label className='flex items-center text-black text-sm sm:text-base'><FaCommentDots className='mr-2'/> Message:</label>
+            <label className={`flex items-center ${webMode === "Light" ? "text-black" : "text-white"} text-sm sm:text-base`}><FaCommentDots className='mr-2'/> Message:</label>
             <textarea name='feedback' value={formData.feedback} onChange={handleInputChange} required 
               className='w-full p-3 border-2 border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400' 
               rows='4' placeholder='Your Feedback'></textarea>
           </div>
           <div>
-            <label className='text-black text-sm sm:text-base'>Rating:</label>
+            <label className={`${webMode === "Light" ? "text-black" : "text-white"} text-sm sm:text-base`}>Rating:</label>
             <select name='rating' value={formData.rating} onChange={handleInputChange} required 
               className='ml-2 border-2 border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-400'>
               <option value=''>Choose...</option>

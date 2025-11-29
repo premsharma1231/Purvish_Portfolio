@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState, useContext } from "react";
-import Button from "../Button";
+import Button from "../button";
 import { faBootstrap, faCss, faFigma, faHtml5, faJs, faReact } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Education from './Education';
@@ -215,7 +215,7 @@ function About(){
           Cyber Security Certificate
       </Button>
     </div>
-      <h1 as="a" className="mt-5 font-Karla font-bold text-lg text-green-200 bg-black px-20 py-5 rounded-full 
+      <h1 as="a" className="mt-5 font-Karla font-bold text-lg text-[rgb(203,238,239)] bg-[rgb(13,13,13)] px-24 py-5 rounded-full 
           transform transition duration-300 hover:scale-110 hover:bg-green-200 hover:border-black hover:text-black"
           href='' filled rel="noopener noreferrer">
           Download Quotation to hire me in Promotional Industry

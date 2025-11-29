@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "./Button";
+import Button from "./button";
 import Tilt from "react-parallax-tilt";
 
 function ProjectCard({ title, description, GithubUrl, LiveUrl, urlToImage, languageUsed }) {

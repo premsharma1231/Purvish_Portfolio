@@ -17,13 +17,10 @@ const Content = () => {
 
         const typewriter = new Typewriter('#description', {
             strings: [
-                "Front-end Web Developer.",
-                "Trainer at KPO/BPO Company.",
-                "Freelancer.",
-                "Full-time Quality Analyst.",
-                "Auditor.",
-                "currently working in Promotional Industry.",
-                "Process Associate at AWS."
+                "I am currently working in Promotional Industry as Process Associate at AWS.",
+                "I have a superb skills in Front-end Web Development.",
+                "I can work as Freelancer in Frontend Development and in Promotional Industry.",
+                "I previously worked at Arcgate (a KPO/BPO company) where I served as a Trainer, Quality Analyst, and Auditor.",
             ],
             autoStart: true,
             loop: true,
@@ -44,7 +41,7 @@ const Content = () => {
                 BUT YOU CAN CALL ME <span id="premname" className="underline">Prem</span>
             </span>
             <span className="w-full lg:w-2/3 m-auto text-md font-bold mt-4 lg:text-2xl mb-4">
-                I am a <span id="description" className="font-Karla text-black-500 font-bold "></span>
+                <span id="description" className="font-Karla text-black-500 font-bold "></span>
             </span>
             {/* <BelieveEffect /> */}
         </div>
