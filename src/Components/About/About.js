@@ -228,6 +228,14 @@ function About(){
 >
   Download Quotation to hire me in Promotional Industry
 </a>
+ <div className="flex flex-row mt-5 gap-40">
+      <Button target="blank" as="a" href='https://coursera.org/share/6306b06fa034a869cc92ab1b765a267e' filled rel="noopener noreferrer">
+          Data Structures and Algorithms
+      </Button>
+      <Button target="blank" as="a" href='https://coursera.org/share/f06c7fb5222225110e2641e937939417' filled rel="noopener noreferrer">
+          AI Strategy and Governance
+      </Button>
+    </div>
 
     </div>
 
